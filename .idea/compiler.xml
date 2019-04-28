@@ -6,16 +6,16 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="ddemo" />
+        <module name="paper_proj" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="ddemo" target="1.8" />
+      <module name="paper_proj" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="ddemo" options="-parameters" />
+      <module name="paper_proj" options="-parameters" />
     </option>
   </component>
 </project>
