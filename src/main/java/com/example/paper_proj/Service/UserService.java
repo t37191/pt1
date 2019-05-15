@@ -90,6 +90,12 @@ public class UserService  {
         return comUserRepository.save(user);
     }
 
+    public Admin updateAdmin(Admin admin){
+        return adminRepository.save(admin);
+    }
+
+
+
     //删除
     public void deleteUserById(Integer user_id){
         userRepository.deleteById(user_id);
