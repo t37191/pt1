@@ -15,6 +15,7 @@ import java.sql.Timestamp;
 @Data
 public class Outcome implements Serializable {
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Getter
     @Setter
     @Column(name = "outcome_id")
@@ -39,4 +40,14 @@ public class Outcome implements Serializable {
     @Setter
     @Column(name = "time")
     protected Timestamp time;
+
+//    @OneToMany(mappedBy = "outcome",cascade = CascadeType.ALL)
+//    @Getter
+//    @Setter
+//    private Set<Keyword> keywords=new HashSet<>();
+//
+//    public void addKeywords(Keyword keyword){
+//        keyword.setOutcome(this);
+//        this.keywords.add(keyword);
+//    }
 }

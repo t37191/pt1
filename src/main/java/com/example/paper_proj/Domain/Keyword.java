@@ -1,6 +1,5 @@
 package com.example.paper_proj.Domain;
 
-import com.example.paper_proj.Domain.EmbeddedKey.KeywordPK;
 import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
@@ -11,12 +10,21 @@ import javax.persistence.*;
 @Table(name = "keywords")
 @Data
 public class Keyword {
-    @EmbeddedId
+    @Id
     @Getter
     @Setter
-    private KeywordPK keywordPK;
+    @Column(name = "keyword_id")
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Integer keyword_id;
 
-//    @ManyToOne(fetch = FetchType.LAZY,cascade = {CascadeType.PERSIST,CascadeType.MERGE})
-//    @JoinColumn(name = "outcome_id")
-//    private Outcome outcome;
+    @Getter
+    @Setter
+    @Column(name = "keyword")
+    private String keyword;
+
+    @Getter
+    @Setter
+    @Column(name = "outcome_id")
+    private Integer outcome_id;
+
 }

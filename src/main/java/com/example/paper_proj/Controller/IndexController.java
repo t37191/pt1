@@ -1,5 +1,6 @@
 package com.example.paper_proj.Controller;
 
+import com.example.paper_proj.Domain.Keyword;
 import com.example.paper_proj.Domain.Outcome;
 import com.example.paper_proj.Domain.Paper;
 import com.example.paper_proj.Service.OutcomeService;
@@ -22,6 +23,19 @@ public class IndexController {
     @GetMapping("/paper/{key}")
     public List<Outcome> getPapers(@PathVariable("key") String title){
         return outcomeService.serarchOutcome(title);
+    }
+
+    @GetMapping("/paper?key={key}")
+    public List<Outcome> getPapers2(@RequestParam("key") String title){
+        return outcomeService.serarchOutcome(title);
+    }
+
+    @PostMapping("/keyword")
+    public Keyword addKeyword(@RequestBody Keyword keyword){ return outcomeService.addKeyword(keyword);}
+
+    @GetMapping("/outcome")
+    public List<Outcome> getAllOutcome(){
+        return outcomeService.getAll();
     }
 
     @GetMapping("/outcome/{keyword}")

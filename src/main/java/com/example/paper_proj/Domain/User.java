@@ -20,15 +20,12 @@ import java.util.List;
 @Inheritance(strategy = InheritanceType.JOINED)
 @Data
 public class User implements Serializable, UserDetails {
-//    @Id
-//    @GeneratedValue
-//    protected Integer id;
-//    @Column(name = "UserId")
-    @Id
-    @GeneratedValue
+
     @Setter
     @Getter
     @Column(name = "user_id")
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     protected Integer user_id;
 
     @Setter

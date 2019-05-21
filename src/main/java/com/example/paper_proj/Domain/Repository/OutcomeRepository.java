@@ -7,7 +7,7 @@ import java.util.List;
 
 public interface OutcomeRepository extends JpaRepository<Outcome,Integer> {
 
-    public List<Outcome> findByTitleContaining(String titlelike);
+    public List<Outcome> findAllByTitleContaining(String titlelike);
+    public List<Outcome> findAllByAbstrContaining(String abstrlike);
 
-    //public Outcome findByOutcome_id(Integer outcome_id);
 }
