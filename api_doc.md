@@ -36,3 +36,22 @@ eg:
 "reply_number"
 
 为了用/bbs_reply/count?r_reply_id=1 这种东西获取回复数量。如果觉得这种方法太扯麻烦联系我。。。
+
+* /paper
+
+      "id",
+      "title",
+      "author": [
+        {
+          "author_id",
+          "author_name"
+        }
+      ],
+      "abstract",
+      "keyword": [
+        {
+          "keyword"
+        }
+      ]
+      
+author和keyword都是数组，因为可能不止一个。
