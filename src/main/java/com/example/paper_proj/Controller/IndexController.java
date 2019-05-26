@@ -25,7 +25,7 @@ public class IndexController {
         return outcomeService.serarchOutcome(title);
     }
 
-    @GetMapping("/paper?key={key}")
+    @GetMapping("/paper")
     public List<Outcome> getPapers2(@RequestParam("key") String title){
         return outcomeService.serarchOutcome(title);
     }
