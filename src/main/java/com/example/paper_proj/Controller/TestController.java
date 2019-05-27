@@ -1,7 +1,6 @@
 package com.example.paper_proj.Controller;
 
 import com.example.paper_proj.Domain.Admin;
-import com.example.paper_proj.Domain.ComUser;
 import com.example.paper_proj.Service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -56,10 +55,10 @@ public class TestController {
     }
 
     // 注册
-    @RequestMapping(value = "/authentication/register", method = RequestMethod.POST)
-    public ComUser register(@RequestBody ComUser addedUser ) throws AuthenticationException {
-        return authService.signupComUser(addedUser);
-    }
+//    @RequestMapping(value = "/authentication/register", method = RequestMethod.POST)
+//    public ComUser register(@RequestBody ComUser addedUser ) throws AuthenticationException {
+//        return authService.signupComUser(addedUser);
+//    }
 
     @RequestMapping(value = "/authentication/register2", method = RequestMethod.POST)
     public Admin register2(@RequestBody Admin addedUser ) throws AuthenticationException {

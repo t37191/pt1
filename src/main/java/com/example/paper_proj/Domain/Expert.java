@@ -13,7 +13,7 @@ import javax.persistence.Table;
 @Table(name = "Expert")
 @PrimaryKeyJoinColumn(name = "user_id")
 @Data
-public class Expert extends ComUser {
+public class Expert extends User {
     @Setter
     @Getter
     @Column(name = "dep")
@@ -24,12 +24,11 @@ public class Expert extends ComUser {
     @Column(name = "post")
     private String post;
 
-    public Expert(ComUser user,String dep,String post) {
+    public Expert(User user,String dep,String post) {
         this.setUser_id(user.getUser_id());
         this.setAge(user.getAge());
         this.setContact(user.getContact());
         this.setPassword(user.getPassword());
-        this.setPoint(user.getPoint());
         this.setUsername(user.getUsername());
         this.setDep(dep);
         this.setPost(post);

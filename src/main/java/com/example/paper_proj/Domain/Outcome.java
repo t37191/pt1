@@ -2,50 +2,37 @@ package com.example.paper_proj.Domain;
 
 
 import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
+import org.springframework.data.elasticsearch.annotations.Document;
+import org.springframework.data.elasticsearch.annotations.Field;
+import org.springframework.data.elasticsearch.annotations.FieldType;
 
-import javax.persistence.*;
-import java.io.Serializable;
-import java.sql.Timestamp;
+import javax.persistence.Id;
+import java.util.List;
 
-@Entity
-@Table(name = "outcome")
-@Inheritance(strategy = InheritanceType.JOINED)
 @Data
-//@Document(indexName = "aminer_v2", type = "_doc")
-public class Outcome implements Serializable {
+@Document(indexName = "aminer", type = "_doc", replicas = 0)
+public class Outcome {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    @Getter
-    @Setter
-    @Column(name = "outcome_id")
    // @Field(index = false, type = FieldType.Integer)
-    protected Integer outcome_id;
+    protected String id;
 
-    @Getter
-    @Setter
-    @Column(name = "title")
-   // @Field(type = FieldType.Text , analyzer = "ik_max_word")
+    @Field(type = FieldType.Text)
     protected String title;
 
-    @Getter
-    @Setter
-    @Column(name = "abstract")
-   // @Field(type = FieldType.Text , analyzer = "ik_max_word")
+    @Field(type = FieldType.Text)
     protected String abstr;
 
-    @Getter
-    @Setter
-    @Column(name = "pdf")
-   // @Field(index = false, type = FieldType.Text)
+    @Field(index = false, type = FieldType.Text)
     protected String pdf;
 
-    @Getter
-    @Setter
-    @Column(name = "time")
-   // @Field(type = FieldType.Date)
-    protected Timestamp time;
+    @Field(type = FieldType.Integer)
+    protected Integer year;
+
+    @Field(type = FieldType.Nested)
+    protected List<Author> authors;
+
+    @Field(type = FieldType.Text)
+    protected List<String> keywords;
 
 //    @OneToMany(mappedBy = "outcome",cascade = CascadeType.ALL)
 //    @Getter

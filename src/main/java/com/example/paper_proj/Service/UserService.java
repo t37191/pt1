@@ -1,10 +1,8 @@
 package com.example.paper_proj.Service;
 
 import com.example.paper_proj.Domain.Admin;
-import com.example.paper_proj.Domain.ComUser;
 import com.example.paper_proj.Domain.Expert;
 import com.example.paper_proj.Domain.Repository.AdminRepository;
-import com.example.paper_proj.Domain.Repository.ComUserRepository;
 import com.example.paper_proj.Domain.Repository.ExpertRepository;
 import com.example.paper_proj.Domain.Repository.UserRepository;
 import com.example.paper_proj.Domain.User;
@@ -42,9 +40,6 @@ public class UserService  {
     private UserRepository userRepository;
 
     @Autowired
-    private ComUserRepository comUserRepository;
-
-    @Autowired
     private ExpertRepository expertRepository;
 
     @Autowired
@@ -66,13 +61,13 @@ public class UserService  {
     }
 
     //注册
-    public ComUser signupComUser(ComUser user){
+    public User signupComUser(User user){
         user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
         user.setAuth("user");
-        return comUserRepository.save(user);
+        return userRepository.save(user);
     }
 
-    public Expert signupExpert(ComUser user,String Dep,String Post){
+    public Expert signupExpert(User user,String Dep,String Post){
         Expert expert=new Expert(user,Dep,Post);
         expert.setPassword(bCryptPasswordEncoder.encode(expert.getPassword()));
         expert.setAuth("expert");
@@ -86,8 +81,8 @@ public class UserService  {
     }
 
     //修改
-    public ComUser updateUser(ComUser user){
-        return comUserRepository.save(user);
+    public User updateUser(User user){
+        return userRepository.save(user);
     }
 
     public Admin updateAdmin(Admin admin){

@@ -1,7 +1,6 @@
 package com.example.paper_proj.Controller;
 
 import com.example.paper_proj.Domain.Admin;
-import com.example.paper_proj.Domain.ComUser;
 import com.example.paper_proj.Domain.User;
 import com.example.paper_proj.Service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,8 +31,8 @@ public class UserController {
     }
 
     @PostMapping(value = "/signup-user")
-    public ComUser signupUser(@RequestBody ComUser comUser){
-        return userService.signupComUser(comUser);
+    public User signupUser(@RequestBody User user){
+        return userService.signupComUser(user);
     }
 
     @PostMapping(value = "/signup-admin")
@@ -55,7 +54,7 @@ public class UserController {
 
     @PutMapping(value = "/update")
     @PreAuthorize("hasAuthority('admin')")
-    public ComUser updateUser(@RequestBody ComUser user){
+    public User updateUser(@RequestBody User user){
         return userService.updateUser(user);
     }
 }
