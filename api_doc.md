@@ -62,20 +62,17 @@ author和keyword都是数组，因为可能不止一个。
 
 * /search
 
-      [
+      "outcomeId",
+      "title",
+      "time",
+      "author": [
             {
-                  "outcomeId",
-                  "title",
-                  "time",
-                  "author": [
-                        {
-                              "author_id",
-                              "author_name"
-                        }
-                  ],
-                  "source"
+                  "author_id",
+                  "author_name"
             }
-      ]
+      ],
+      "source"
+      
 * /search/count
 
 这两个除了上面三个，还应该有搜索类型_type还有搜索内容_content
