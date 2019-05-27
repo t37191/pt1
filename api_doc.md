@@ -31,7 +31,7 @@ eg:
 
 /bbs_reply?r_topic_id=1&r_reply_id=1&_sort=reply_time&_limit=10
 
-这里应该会用到_sort, _limit, _start，话说这些玩意可能莫名其妙的地方就用到了，最好有什么方法弄个函数处理掉。不行再说吧
+这里应该会用到_sort, _limit, _start, 话说这些玩意可能莫名其妙的地方就用到了，最好有什么方法弄个函数处理掉。不行再说吧
 
 除了本条评论的用户信息，还需要知道回复的评论的用户信息
 
@@ -59,3 +59,29 @@ eg:
       ]
       
 author和keyword都是数组，因为可能不止一个。
+
+* /search
+
+      [
+            {
+                  "outcomeId",
+                  "title",
+                  "time",
+                  "author": [
+                        {
+                              "author_id",
+                              "author_name"
+                        }
+                  ],
+                  "source"
+            }
+      ]
+* /search/count
+
+这两个除了上面三个，还应该有搜索类型_type还有搜索内容_content
+
+eg：/search/count?type=fulltext&_contenet=asadsasdad&_start=0&_limit=10
+
+搜索类型先默认全文检索吧
+
+有来源就写一下，没有就全为空就行了。。
