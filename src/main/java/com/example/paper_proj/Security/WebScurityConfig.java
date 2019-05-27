@@ -49,6 +49,7 @@ public class WebScurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers(HttpMethod.PUT,"/api/user/**").permitAll()
                 .antMatchers(HttpMethod.POST,"/api/paper").permitAll()
                 .antMatchers(HttpMethod.GET,"/api/paper/**").permitAll()
+                .antMatchers(HttpMethod.GET,"api/outcome/**").permitAll()
                 .antMatchers(HttpMethod.GET,"/api/outcome/**").permitAll()
                 .antMatchers(HttpMethod.GET,"/api/paper").permitAll()
                 .antMatchers(HttpMethod.POST,"/api/keyword").permitAll()
