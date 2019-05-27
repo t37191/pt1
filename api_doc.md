@@ -23,13 +23,17 @@ eg:
       "r_topic_id",
       "reply_content",
       "r_reply_id",
-      "reply_time"
+      "reply_time",
+      "r_reply_user_name",
+      "r_reply_user_id"
 
 结构应该和数据库一样，但是格式详见https://github.com/typicode/json-server，有一些查询参数，类似下面这种
 
 /bbs_reply?r_topic_id=1&r_reply_id=1&_sort=reply_time&_limit=10
 
 这里应该会用到_sort, _limit, _start，话说这些玩意可能莫名其妙的地方就用到了，最好有什么方法弄个函数处理掉。不行再说吧
+
+除了本条评论的用户信息，还需要知道回复的评论的用户信息
 
 * /bbs_reply/count
 
