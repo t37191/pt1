@@ -1,6 +1,4 @@
-* 这玩意不一定哪天哪行就变了（我尽量避免），关注diff文件吧。
-
-* 所有时间类型全部返回 xxxx-xx-xx-xx-xx-xx 吧，年月日时分秒，类似1999-08-12-23-14-15，没有的设成00，年4位其余两位
+* 这玩意不一定哪天哪行就变了（我尽量避免），关注diff文件吧
 
 * /bbs_topic
 
@@ -45,35 +43,47 @@ eg:
 
 * /paper
 
-      "id",
-      "title",
-      "author": [
-        {
-          "author_id",
-          "author_name"
-        }
-      ],
-      "abstract",
-      "keyword": [
-        {
-          "keyword"
-        }
-      ]
+      {
+        "id": "FHBA_GoBkHD19ZAOxDmY",
+        "title": "gaodengshuxue",
+        "abstr": "gaodengshuxue的魅力",
+        "authors": [
+            {
+                "id": "aaabbbcccdddeeefffgg",
+                "name": "王泽"
+            }
+        ],
+        "keywords": [
+            "数学",
+            "科学"
+        ],
+        "pdf": "[图片]www.4399.com",
+        "year": 2019
+    }
+
       
 author和keyword都是数组，因为可能不止一个。
 
 * /search
 
-      "outcomeId",
-      "title",
-      "time",
-      "author": [
+      {
+        "id": "FHBA_GoBkHD19ZAOxDmY",
+        "title": "gaodengshuxue",
+        "abstr": "gaodengshuxue的魅力",
+        "authors": [
             {
-                  "author_id",
-                  "author_name"
+                "id": "aaabbbcccdddeeefffgg",
+                "name": "王泽"
             }
-      ],
-      "source"
+        ],
+        "keywords": [
+            "数学",
+            "科学"
+        ],
+        "pdf": "[图片]www.4399.com",
+        "year": 2019
+    }
+
       
 * /search/count
 
