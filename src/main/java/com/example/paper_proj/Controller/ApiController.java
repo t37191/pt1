@@ -4,7 +4,6 @@ import com.example.paper_proj.Domain.Outcome;
 import com.example.paper_proj.Domain.User;
 import com.example.paper_proj.Service.OutcomeService;
 import com.example.paper_proj.Service.UserService;
-import com.google.gson.JsonArray;
 import org.elasticsearch.common.collect.Tuple;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -69,7 +68,6 @@ public class ApiController {
             String token = tuple.v1();
             Integer user_id = tuple.v2();
             String username = user.getUsername();
-            JsonArray languages = new JsonArray();
             JSONObject jsonObject = new JSONObject();
             jsonObject.put("token",token);
             jsonObject.put("user_id",user_id);
