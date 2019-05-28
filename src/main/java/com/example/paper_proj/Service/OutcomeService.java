@@ -13,17 +13,17 @@ public class OutcomeService {
     @Autowired
     private OutcomeRepository outcomeRepository;
     //根据标题和摘要查找论文
-    public List<Outcome> getByTitleAndAbstr(String title, String abstr){
-        return outcomeRepository.findAllByTitleAndAbstr(title,abstr);
+    public List<Outcome> getByTitleOrAbstr(String word){
+        return outcomeRepository.findAllByTitleOrAbstr(word);
     }
     //根据关键字查找论文
     public List<Outcome> getByKeyWords(String keywords){
         return outcomeRepository.findAllByKeywords(keywords);
     }
-//    //根据作者查找论文
-//    public List<Outcome> getByAuthors(String author){
-//        return outcomeRepository.findAllByAuthorContaining(author);
-//    }
+    //根据作者查找论文
+    public List<Outcome> getByAuthors(String author){
+        return outcomeRepository.findAllByAuthorsContaining(author);
+    }
 
     //增加论文
     public Outcome addOutcome(Outcome outcome){
@@ -35,10 +35,10 @@ public class OutcomeService {
         return outcomeRepository.save(outcome);
     }
 
-//    //删除论文
-//    public void deleteOutcome(String id){
-//        outcomeRepository.deleteById(id);
-//    }
+    //删除论文
+    public void deleteOutcome(String id){
+        outcomeRepository.deleteById(id);
+    }
     /*
     //搜索
     public List<Outcome> serarchOutcome(String words){

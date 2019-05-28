@@ -8,26 +8,27 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/outcome")
+@RequestMapping
+@CrossOrigin(origins = "http://localhost:8000")
 public class IndexController {
     @Autowired
     private OutcomeService outcomeService;
     /*
     查询服务
      */
-    @GetMapping("/getByKeywords")
+    @GetMapping("/search/keyword")
     public List<Outcome> getOutcomeByKeywords(@RequestParam("keywords")String keywords){
         return outcomeService.getByKeyWords(keywords);
     }
 
-//    @GetMapping("/getByAuthors")
-//    public List<Outcome> getOutcomeByAuthor(@RequestParam("authors")String authors){
-//        return outcomeService.getByAuthors(authors);
-//    }
+    @GetMapping("/getByAuthors")
+    public List<Outcome> getOutcomeByAuthor(@RequestParam("authors")String authors){
+        return outcomeService.getByAuthors(authors);
+    }
 
-    @GetMapping("/getByTitleAndAbstr")
-    public List<Outcome> getOutcomeByTitAndAbstr(@RequestParam("title")String title,@RequestParam("abstract")String abstr){
-        return outcomeService.getByTitleAndAbstr(title,abstr);
+    @GetMapping("/getByTitleOrAbstr")
+    public List<Outcome> getOutcomeByTitOrAbstr(@RequestParam("word")String word){
+        return outcomeService.getByTitleOrAbstr(word);
     }
 
     /*

@@ -2,87 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="58e25a6b-34ff-4b09-992d-97ff0f1f4065" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_carrotsearch_hppc_0_7_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_dataformat_jackson_dataformat_cbor_2_9_8.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_dataformat_jackson_dataformat_smile_2_9_8.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_dataformat_jackson_dataformat_yaml_2_9_8.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_spullara_mustache_java_compiler_0_9_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_tdunning_t_digest_3_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_11.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_buffer_4_1_34_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_codec_4_1_34_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_codec_http_4_1_34_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_common_4_1_34_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_handler_4_1_34_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_resolver_4_1_34_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_transport_4_1_34_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__joda_time_joda_time_2_10_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_sf_jopt_simple_jopt_simple_5_0_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpasyncclient_4_1_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpclient_4_5_8.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpcore_4_4_11.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpcore_nio_4_4_11.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_lucene_lucene_analyzers_common_7_4_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_lucene_lucene_backward_codecs_7_4_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_lucene_lucene_core_7_4_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_lucene_lucene_grouping_7_4_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_lucene_lucene_highlighter_7_4_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_lucene_lucene_join_7_4_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_lucene_lucene_memory_7_4_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_lucene_lucene_misc_7_4_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_lucene_lucene_queries_7_4_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_lucene_lucene_queryparser_7_4_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_lucene_lucene_sandbox_7_4_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_lucene_lucene_spatial3d_7_4_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_lucene_lucene_spatial_7_4_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_lucene_lucene_spatial_extras_7_4_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_lucene_lucene_suggest_7_4_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_elasticsearch_client_elasticsearch_rest_client_6_4_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_elasticsearch_client_transport_6_4_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_elasticsearch_elasticsearch_6_4_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_elasticsearch_elasticsearch_cli_6_4_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_elasticsearch_elasticsearch_core_6_4_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_elasticsearch_elasticsearch_secure_sm_6_4_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_elasticsearch_elasticsearch_x_content_6_4_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_elasticsearch_jna_4_5_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_elasticsearch_plugin_lang_mustache_client_6_4_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_elasticsearch_plugin_parent_join_client_6_4_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_elasticsearch_plugin_percolator_client_6_4_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_elasticsearch_plugin_rank_eval_client_6_4_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_elasticsearch_plugin_reindex_client_6_4_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_elasticsearch_plugin_transport_netty4_client_6_4_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hdrhistogram_HdrHistogram_2_1_9.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_data_elasticsearch_2_1_4_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_elasticsearch_3_1_6_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/paper_proj/Domain/Author.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/paper_proj/EsDemoApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/paper_proj/Controller/BBS_ReplyController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/paper_proj/Controller/BBS_SectionController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/paper_proj/Domain/Repository/bbsReplyRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/paper_proj/Domain/Repository/bbsSectionRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/paper_proj/Domain/bbsReply.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/paper_proj/Domain/bbsSection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/paper_proj/Service/bbsReplyService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/paper_proj/Service/bbsSectionService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/paper_proj.iml" beforeDir="false" afterPath="$PROJECT_DIR$/paper_proj.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/paper_proj/Controller/IndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/paper_proj/Controller/IndexController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/paper_proj/DdemoApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/paper_proj/DdemoApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/paper_proj/Domain/Outcome.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/paper_proj/Domain/Outcome.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/paper_proj/Domain/Paper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/paper_proj/Domain/Patent.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/paper_proj/Domain/Project.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/paper_proj/Domain/Repository/OutcomeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/paper_proj/Domain/Repository/OutcomeRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/paper_proj/Domain/Repository/PaperRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/paper_proj/Domain/Repository/PatentRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/paper_proj/Domain/Repository/ProjectRepository.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/paper_proj/Security/WebScurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/paper_proj/Security/WebScurityConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/paper_proj/Service/OutcomeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/paper_proj/Service/OutcomeService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/paper_proj/Controller/IndexController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/paper_proj/Controller/IndexController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/paper_proj/DdemoApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/paper_proj/DdemoApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/paper_proj/Domain/Outcome.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/paper_proj/Domain/Outcome.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/paper_proj/Domain/Paper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/paper_proj/Domain/Patent.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/paper_proj/Domain/Project.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/paper_proj/Domain/Repository/OutcomeRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/paper_proj/Domain/Repository/OutcomeRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/paper_proj/Domain/Repository/PaperRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/paper_proj/Domain/Repository/PatentRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/paper_proj/Domain/Repository/ProjectRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/paper_proj/Security/WebScurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/paper_proj/Security/WebScurityConfig.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/paper_proj/Service/OutcomeService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/paper_proj/Service/OutcomeService.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
@@ -118,16 +55,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/example/paper_proj/Service/OutcomeService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="592">
-              <caret line="40" column="7" lean-forward="true" selection-start-line="37" selection-start-column="6" selection-end-line="40" selection-end-column="7" />
+            <state relative-caret-position="285">
+              <caret line="16" column="59" selection-start-line="16" selection-start-column="59" selection-end-line="16" selection-end-column="59" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#430#431#0" expanded="true" />
-                <element signature="e#498#499#0" expanded="true" />
-                <element signature="e#701#702#0" expanded="true" />
-                <element signature="e#755#756#0" expanded="true" />
-                <element signature="e#818#819#0" expanded="true" />
-                <element signature="e#872#873#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -136,7 +67,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/example/paper_proj/EsDemoApplicationTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
+            <state relative-caret-position="307">
               <caret line="19" column="37" selection-start-line="19" selection-start-column="37" selection-end-line="19" selection-end-column="37" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -146,48 +77,69 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-988">
+              <caret line="17" column="40" selection-start-line="17" selection-start-column="40" selection-end-line="17" selection-end-column="40" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="307">
+              <caret line="19" column="47" selection-start-line="19" selection-start-column="47" selection-end-line="19" selection-end-column="47" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/example/paper_proj/Controller/IndexController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="98">
-              <caret line="19" column="41" selection-start-line="19" selection-start-column="41" selection-end-line="19" selection-end-column="41" />
+            <state relative-caret-position="342">
+              <caret line="18" column="32" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1042#1043#0" expanded="true" />
-                <element signature="e#1099#1100#0" expanded="true" />
+                <element signature="e#1122#1123#0" expanded="true" />
+                <element signature="e#1179#1180#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/paper_proj/Security/WebScurityConfig.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/paper_proj/Controller/BBS_SectionController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="141">
-              <caret line="51" column="73" selection-start-line="51" selection-start-column="73" selection-end-line="51" selection-end-column="73" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/paper_proj/Domain/Repository/OutcomeRepository.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="269">
-              <caret line="19" column="40" lean-forward="true" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="40" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="133">
+              <caret line="13" column="47" selection-start-line="13" selection-start-column="47" selection-end-line="13" selection-end-column="47" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/paper_proj/Domain/Author.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/paper_proj/Controller/BBS_ReplyController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="193">
-              <caret line="12" column="11" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
+            <state relative-caret-position="57">
+              <caret line="13" column="47" lean-forward="true" selection-start-line="13" selection-start-column="47" selection-end-line="13" selection-end-column="47" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/paper_proj/Service/bbsReplyService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="76">
+              <caret line="4" column="36" selection-start-line="4" selection-start-column="36" selection-end-line="4" selection-end-column="36" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/paper_proj/Domain/bbsReply.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="228">
+              <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -196,10 +148,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/paper_proj/Domain/Outcome.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/paper_proj/Domain/Repository/bbsReplyRepository.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="12" column="56" selection-start-line="12" selection-start-column="56" selection-end-line="12" selection-end-column="56" />
+            <state relative-caret-position="164">
+              <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -223,12 +175,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/example/ddemo/Entity/ComUser.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/example/ddemo/Entity/Expert.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/example/ddemo/Controller/IndexController.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/login.html" />
-        <option value="$PROJECT_DIR$/src/main/java/com/example/ddemo/Security/WebSecurityConfig.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/example/ddemo/Entity/User.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/ddemo/Utils/JwtTokenUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/ddemo/Conf/Const.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/ddemo/Security/JWTTokenFilter.java" />
@@ -262,18 +208,24 @@
         <option value="$PROJECT_DIR$/src/main/java/com/example/paper_proj/Domain/Keyword.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/paper_proj/DdemoApplication.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/paper_proj/Domain/EsOutcome.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/example/paper_proj/EsDemoApplicationTests.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/paper_proj/Domain/Paper.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/paper_proj/Domain/Patent.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/paper_proj/Domain/Project.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/paper_proj/Domain/Author.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/paper_proj/Domain/Outcome.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/example/paper_proj/Controller/IndexController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/paper_proj/Security/WebScurityConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/paper_proj/Domain/Repository/OutcomeRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/paper_proj/Service/OutcomeService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/example/paper_proj/Domain/Author.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/paper_proj/Domain/Repository/bbsReplyRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/paper_proj/Domain/Repository/bbsSectionRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/paper_proj/Service/bbsSectionService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/paper_proj/Controller/BBS_ReplyController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/paper_proj/Service/bbsReplyService.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/paper_proj/Controller/BBS_SectionController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/paper_proj/Controller/IndexController.java" />
       </list>
     </option>
   </component>
@@ -285,10 +237,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="1">
-    <option name="x" value="98" />
-    <option name="y" value="38" />
-    <option name="width" value="1357" />
-    <option name="height" value="729" />
+    <option name="x" value="81" />
+    <option name="y" value="160" />
+    <option name="width" value="1191" />
+    <option name="height" value="820" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -452,6 +404,12 @@
     <property name="settings.editor.selected.configurable" value="editor.preferences.import" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.example.paper_proj.Controller" />
+      <recent name="com.example.paper_proj.Service" />
+      <recent name="com.example.paper_proj.Domain.Repository" />
+      <recent name="com.example.paper_proj.Domain" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/java/com/example/ddemo/Security" />
       <recent name="$PROJECT_DIR$/src/main/resources/templates" />
@@ -548,7 +506,7 @@
       <workItem from="1558422047771" duration="4665000" />
       <workItem from="1558435813076" duration="4284000" />
       <workItem from="1558786397792" duration="18262000" />
-      <workItem from="1558940868595" duration="13321000" />
+      <workItem from="1558940868595" duration="21202000" />
     </task>
     <servers />
   </component>
@@ -585,13 +543,13 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="124500000" />
+    <option name="totallyTimeSpent" value="132381000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="98" y="38" width="1357" height="729" extended-state="0" />
+    <frame x="81" y="160" width="1191" height="820" extended-state="1" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21279876" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24403183" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -601,7 +559,7 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32891566" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49917218" visible="true" weight="0.4" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49917218" visible="true" weight="0.37463558" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -610,7 +568,7 @@
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32891566" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5008278" side_tool="true" weight="0.4" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.32605043" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.30053908" />
       <window_info anchor="bottom" id="Java Enterprise" order="12" />
       <window_info anchor="bottom" id="Database Changes" order="13" />
       <window_info anchor="bottom" id="Version Control" order="14" />
@@ -665,118 +623,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-dependencies/2.1.4.RELEASE/spring-boot-dependencies-2.1.4.RELEASE.pom">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="229" selection-start-line="229" selection-end-line="229" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="uml://MAVEN/com.example:ddemo:0.0.1-SNAPSHOT">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>MAVEN</ID>
-          <OriginalElement>com.example:ddemo:0.0.1-SNAPSHOT</OriginalElement>
-          <nodes>
-            <node x="" y="">com.example:ddemo:0.0.1-SNAPSHOT</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-data-jpa:jar:2.1.4.RELEASE</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-data-jpa:jar:2.1.4.RELEASE/org.springframework.boot:spring-boot-starter-aop:jar:2.1.4.RELEASE</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-data-jpa:jar:2.1.4.RELEASE/org.springframework.boot:spring-boot-starter-aop:jar:2.1.4.RELEASE/org.aspectj:aspectjweaver:jar:1.9.2</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-data-jpa:jar:2.1.4.RELEASE/javax.transaction:javax.transaction-api:jar:1.3</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-data-jpa:jar:2.1.4.RELEASE/javax.xml.bind:jaxb-api:jar:2.3.1</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-data-jpa:jar:2.1.4.RELEASE/org.hibernate:hibernate-core:jar:5.3.9.Final</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-data-jpa:jar:2.1.4.RELEASE/org.hibernate:hibernate-core:jar:5.3.9.Final/org.jboss.logging:jboss-logging:jar:3.3.2.Final</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-data-jpa:jar:2.1.4.RELEASE/org.hibernate:hibernate-core:jar:5.3.9.Final/javax.persistence:javax.persistence-api:jar:2.2</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-data-jpa:jar:2.1.4.RELEASE/org.hibernate:hibernate-core:jar:5.3.9.Final/org.javassist:javassist:jar:3.23.1-GA</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-data-jpa:jar:2.1.4.RELEASE/org.hibernate:hibernate-core:jar:5.3.9.Final/net.bytebuddy:byte-buddy:jar:1.9.12</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-data-jpa:jar:2.1.4.RELEASE/org.hibernate:hibernate-core:jar:5.3.9.Final/antlr:antlr:jar:2.7.7</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-data-jpa:jar:2.1.4.RELEASE/org.hibernate:hibernate-core:jar:5.3.9.Final/org.jboss:jandex:jar:2.0.5.Final</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-data-jpa:jar:2.1.4.RELEASE/org.hibernate:hibernate-core:jar:5.3.9.Final/com.fasterxml:classmate:jar:1.4.0</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-data-jpa:jar:2.1.4.RELEASE/org.hibernate:hibernate-core:jar:5.3.9.Final/javax.activation:javax.activation-api:jar:1.2.0</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-data-jpa:jar:2.1.4.RELEASE/org.hibernate:hibernate-core:jar:5.3.9.Final/org.dom4j:dom4j:jar:2.1.1</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-data-jpa:jar:2.1.4.RELEASE/org.hibernate:hibernate-core:jar:5.3.9.Final/org.hibernate.common:hibernate-commons-annotations:jar:5.0.4.Final</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-data-jpa:jar:2.1.4.RELEASE/org.springframework.data:spring-data-jpa:jar:2.1.6.RELEASE</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-data-jpa:jar:2.1.4.RELEASE/org.springframework.data:spring-data-jpa:jar:2.1.6.RELEASE/org.springframework.data:spring-data-commons:jar:2.1.6.RELEASE</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-data-jpa:jar:2.1.4.RELEASE/org.springframework.data:spring-data-jpa:jar:2.1.6.RELEASE/org.springframework:spring-orm:jar:5.1.6.RELEASE</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-data-jpa:jar:2.1.4.RELEASE/org.springframework.data:spring-data-jpa:jar:2.1.6.RELEASE/org.springframework:spring-context:jar:5.1.6.RELEASE</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-data-jpa:jar:2.1.4.RELEASE/org.springframework.data:spring-data-jpa:jar:2.1.6.RELEASE/org.springframework:spring-tx:jar:5.1.6.RELEASE</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-data-jpa:jar:2.1.4.RELEASE/org.springframework.data:spring-data-jpa:jar:2.1.6.RELEASE/org.springframework:spring-beans:jar:5.1.6.RELEASE</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-data-jpa:jar:2.1.4.RELEASE/org.springframework.data:spring-data-jpa:jar:2.1.6.RELEASE/org.slf4j:slf4j-api:jar:1.7.26</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-data-jpa:jar:2.1.4.RELEASE/org.springframework:spring-aspects:jar:5.1.6.RELEASE</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-jdbc:jar:2.1.4.RELEASE</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-jdbc:jar:2.1.4.RELEASE/org.springframework.boot:spring-boot-starter:jar:2.1.4.RELEASE</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-jdbc:jar:2.1.4.RELEASE/org.springframework.boot:spring-boot-starter:jar:2.1.4.RELEASE/org.springframework.boot:spring-boot-starter-logging:jar:2.1.4.RELEASE</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-jdbc:jar:2.1.4.RELEASE/org.springframework.boot:spring-boot-starter:jar:2.1.4.RELEASE/org.springframework.boot:spring-boot-starter-logging:jar:2.1.4.RELEASE/ch.qos.logback:logback-classic:jar:1.2.3</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-jdbc:jar:2.1.4.RELEASE/org.springframework.boot:spring-boot-starter:jar:2.1.4.RELEASE/org.springframework.boot:spring-boot-starter-logging:jar:2.1.4.RELEASE/ch.qos.logback:logback-classic:jar:1.2.3/ch.qos.logback:logback-core:jar:1.2.3</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-jdbc:jar:2.1.4.RELEASE/org.springframework.boot:spring-boot-starter:jar:2.1.4.RELEASE/org.springframework.boot:spring-boot-starter-logging:jar:2.1.4.RELEASE/org.apache.logging.log4j:log4j-to-slf4j:jar:2.11.2</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-jdbc:jar:2.1.4.RELEASE/org.springframework.boot:spring-boot-starter:jar:2.1.4.RELEASE/org.springframework.boot:spring-boot-starter-logging:jar:2.1.4.RELEASE/org.apache.logging.log4j:log4j-to-slf4j:jar:2.11.2/org.apache.logging.log4j:log4j-api:jar:2.11.2</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-jdbc:jar:2.1.4.RELEASE/org.springframework.boot:spring-boot-starter:jar:2.1.4.RELEASE/org.springframework.boot:spring-boot-starter-logging:jar:2.1.4.RELEASE/org.slf4j:jul-to-slf4j:jar:1.7.26</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-jdbc:jar:2.1.4.RELEASE/org.springframework.boot:spring-boot-starter:jar:2.1.4.RELEASE/javax.annotation:javax.annotation-api:jar:1.3.2</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-jdbc:jar:2.1.4.RELEASE/org.springframework.boot:spring-boot-starter:jar:2.1.4.RELEASE/org.yaml:snakeyaml:jar:1.23</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-jdbc:jar:2.1.4.RELEASE/com.zaxxer:HikariCP:jar:3.2.0</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-jdbc:jar:2.1.4.RELEASE/org.springframework:spring-jdbc:jar:5.1.6.RELEASE</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:2.1.4.RELEASE</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:2.1.4.RELEASE/org.springframework.boot:spring-boot-starter-json:jar:2.1.4.RELEASE</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:2.1.4.RELEASE/org.springframework.boot:spring-boot-starter-json:jar:2.1.4.RELEASE/com.fasterxml.jackson.datatype:jackson-datatype-jdk8:jar:2.9.8</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:2.1.4.RELEASE/org.springframework.boot:spring-boot-starter-json:jar:2.1.4.RELEASE/com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.9.8</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:2.1.4.RELEASE/org.springframework.boot:spring-boot-starter-json:jar:2.1.4.RELEASE/com.fasterxml.jackson.module:jackson-module-parameter-names:jar:2.9.8</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:2.1.4.RELEASE/org.springframework.boot:spring-boot-starter-tomcat:jar:2.1.4.RELEASE</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:2.1.4.RELEASE/org.springframework.boot:spring-boot-starter-tomcat:jar:2.1.4.RELEASE/org.apache.tomcat.embed:tomcat-embed-core:jar:9.0.17</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:2.1.4.RELEASE/org.springframework.boot:spring-boot-starter-tomcat:jar:2.1.4.RELEASE/org.apache.tomcat.embed:tomcat-embed-el:jar:9.0.17</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:2.1.4.RELEASE/org.springframework.boot:spring-boot-starter-tomcat:jar:2.1.4.RELEASE/org.apache.tomcat.embed:tomcat-embed-websocket:jar:9.0.17</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:2.1.4.RELEASE/org.hibernate.validator:hibernate-validator:jar:6.0.16.Final</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:2.1.4.RELEASE/org.hibernate.validator:hibernate-validator:jar:6.0.16.Final/javax.validation:validation-api:jar:2.0.1.Final</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:2.1.4.RELEASE/org.springframework:spring-web:jar:5.1.6.RELEASE</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:2.1.4.RELEASE/org.springframework:spring-webmvc:jar:5.1.6.RELEASE</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:2.1.4.RELEASE/org.springframework:spring-webmvc:jar:5.1.6.RELEASE/org.springframework:spring-expression:jar:5.1.6.RELEASE</node>
-            <node x="" y="">mysql:mysql-connector-java:jar:8.0.15</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:2.1.4.RELEASE</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:2.1.4.RELEASE/org.springframework.boot:spring-boot-test:jar:2.1.4.RELEASE</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:2.1.4.RELEASE/org.springframework.boot:spring-boot-test-autoconfigure:jar:2.1.4.RELEASE</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:2.1.4.RELEASE/com.jayway.jsonpath:json-path:jar:2.4.0</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:2.1.4.RELEASE/com.jayway.jsonpath:json-path:jar:2.4.0/net.minidev:json-smart:jar:2.3</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:2.1.4.RELEASE/com.jayway.jsonpath:json-path:jar:2.4.0/net.minidev:json-smart:jar:2.3/net.minidev:accessors-smart:jar:1.2</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:2.1.4.RELEASE/com.jayway.jsonpath:json-path:jar:2.4.0/net.minidev:json-smart:jar:2.3/net.minidev:accessors-smart:jar:1.2/org.ow2.asm:asm:jar:5.0.4</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:2.1.4.RELEASE/junit:junit:jar:4.12</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:2.1.4.RELEASE/org.assertj:assertj-core:jar:3.11.1</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:2.1.4.RELEASE/org.mockito:mockito-core:jar:2.23.4</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:2.1.4.RELEASE/org.mockito:mockito-core:jar:2.23.4/net.bytebuddy:byte-buddy-agent:jar:1.9.12</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:2.1.4.RELEASE/org.mockito:mockito-core:jar:2.23.4/org.objenesis:objenesis:jar:2.6</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:2.1.4.RELEASE/org.hamcrest:hamcrest-core:jar:1.3</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:2.1.4.RELEASE/org.hamcrest:hamcrest-library:jar:1.3</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:2.1.4.RELEASE/org.skyscreamer:jsonassert:jar:1.5.0</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:2.1.4.RELEASE/org.skyscreamer:jsonassert:jar:1.5.0/com.vaadin.external.google:android-json:jar:0.0.20131108.vaadin1</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:2.1.4.RELEASE/org.springframework:spring-core:jar:5.1.6.RELEASE</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:2.1.4.RELEASE/org.springframework:spring-core:jar:5.1.6.RELEASE/org.springframework:spring-jcl:jar:5.1.6.RELEASE</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:2.1.4.RELEASE/org.springframework:spring-test:jar:5.1.6.RELEASE</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:2.1.4.RELEASE/org.xmlunit:xmlunit-core:jar:2.6.2</node>
-            <node x="" y="">javax.xml.bind:jaxb-api:jar:2.3.0</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-security:jar:2.1.4.RELEASE</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-security:jar:2.1.4.RELEASE/org.springframework:spring-aop:jar:5.1.6.RELEASE</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-security:jar:2.1.4.RELEASE/org.springframework.security:spring-security-config:jar:5.1.5.RELEASE</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-security:jar:2.1.4.RELEASE/org.springframework.security:spring-security-config:jar:5.1.5.RELEASE/org.springframework.security:spring-security-core:jar:5.1.5.RELEASE</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-security:jar:2.1.4.RELEASE/org.springframework.security:spring-security-web:jar:5.1.5.RELEASE</node>
-            <node x="" y="">org.springframework.boot:spring-boot-actuator:jar:2.1.4.RELEASE</node>
-            <node x="" y="">org.springframework.boot:spring-boot-actuator:jar:2.1.4.RELEASE/org.springframework.boot:spring-boot:jar:2.1.4.RELEASE</node>
-            <node x="" y="">org.springframework.boot:spring-boot-devtools:jar:2.1.4.RELEASE</node>
-            <node x="" y="">org.springframework.boot:spring-boot-devtools:jar:2.1.4.RELEASE/org.springframework.boot:spring-boot-autoconfigure:jar:2.1.4.RELEASE</node>
-            <node x="" y="">io.jsonwebtoken:jjwt:jar:0.7.0</node>
-            <node x="" y="">io.jsonwebtoken:jjwt:jar:0.7.0/com.fasterxml.jackson.core:jackson-databind:jar:2.9.8</node>
-            <node x="" y="">io.jsonwebtoken:jjwt:jar:0.7.0/com.fasterxml.jackson.core:jackson-databind:jar:2.9.8/com.fasterxml.jackson.core:jackson-annotations:jar:2.9.0</node>
-            <node x="" y="">io.jsonwebtoken:jjwt:jar:0.7.0/com.fasterxml.jackson.core:jackson-databind:jar:2.9.8/com.fasterxml.jackson.core:jackson-core:jar:2.9.8</node>
-          </nodes>
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="0.6831657258937543" x="810.0" y="1676.0" />
-          <SelectedNodes />
-          <Categories />
-          <SCOPE>All</SCOPE>
-          <VISIBILITY>All</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/admin-page.html" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/403.html" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/example/ddemo/Security/JWTAuthenticationFilter.java" />
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/5.1.5.RELEASE/spring-security-core-5.1.5.RELEASE.jar!/org/springframework/security/core/userdetails/UserDetails.class">
       <provider selected="true" editor-type-id="text-editor">
@@ -894,13 +740,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-931">
-          <caret line="17" column="40" selection-start-line="17" selection-start-column="40" selection-end-line="17" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/example/paper_proj/DdemoApplication.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-54">
@@ -994,75 +833,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/example/paper_proj/EsDemoApplicationTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="19" column="37" selection-start-line="19" selection-start-column="37" selection-end-line="19" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="19" column="49" lean-forward="true" selection-start-line="19" selection-start-column="49" selection-end-line="19" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/example/paper_proj/Security/WebScurityConfig.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="141">
-          <caret line="51" column="73" selection-start-line="51" selection-start-column="73" selection-end-line="51" selection-end-column="73" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/paper_proj/Domain/Outcome.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="12" column="56" selection-start-line="12" selection-start-column="56" selection-end-line="12" selection-end-column="56" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/paper_proj/Service/OutcomeService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="592">
-          <caret line="40" column="7" lean-forward="true" selection-start-line="37" selection-start-column="6" selection-end-line="40" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#430#431#0" expanded="true" />
-            <element signature="e#498#499#0" expanded="true" />
-            <element signature="e#701#702#0" expanded="true" />
-            <element signature="e#755#756#0" expanded="true" />
-            <element signature="e#818#819#0" expanded="true" />
-            <element signature="e#872#873#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/paper_proj/Controller/IndexController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="98">
-          <caret line="19" column="41" selection-start-line="19" selection-start-column="41" selection-end-line="19" selection-end-column="41" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1042#1043#0" expanded="true" />
-            <element signature="e#1099#1100#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/paper_proj/Domain/Repository/OutcomeRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
-          <caret line="19" column="40" lean-forward="true" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="40" />
+          <caret line="51" column="46" selection-start-line="51" selection-start-column="46" selection-end-line="51" selection-end-column="46" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1071,11 +845,133 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/example/paper_proj/Domain/Author.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
+        <state relative-caret-position="228">
           <caret line="12" column="11" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/paper_proj/Domain/bbsSection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/paper_proj/Domain/Repository/bbsSectionRepository.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/paper_proj/Service/bbsSectionService.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/paper_proj/Domain/Repository/OutcomeRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="12" column="51" selection-start-line="12" selection-start-column="51" selection-end-line="12" selection-end-column="51" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/paper_proj/Domain/Outcome.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-105">
+          <caret line="12" column="57" selection-start-line="12" selection-start-column="57" selection-end-line="12" selection-end-column="57" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/paper_proj/Domain/Repository/bbsReplyRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/paper_proj/Domain/bbsReply.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/paper_proj/Service/bbsReplyService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="36" selection-start-line="4" selection-start-column="36" selection-end-line="4" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-988">
+          <caret line="17" column="40" selection-start-line="17" selection-start-column="40" selection-end-line="17" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/example/paper_proj/EsDemoApplicationTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="307">
+          <caret line="19" column="37" selection-start-line="19" selection-start-column="37" selection-end-line="19" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/paper_proj/Service/OutcomeService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="16" column="59" selection-start-line="16" selection-start-column="59" selection-end-line="16" selection-end-column="59" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="307">
+          <caret line="19" column="47" selection-start-line="19" selection-start-column="47" selection-end-line="19" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/paper_proj/Controller/BBS_SectionController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="13" column="47" selection-start-line="13" selection-start-column="47" selection-end-line="13" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/paper_proj/Controller/IndexController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="18" column="32" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1122#1123#0" expanded="true" />
+            <element signature="e#1179#1180#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/paper_proj/Controller/BBS_ReplyController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="13" column="47" lean-forward="true" selection-start-line="13" selection-start-column="47" selection-end-line="13" selection-end-column="47" />
         </state>
       </provider>
     </entry>
