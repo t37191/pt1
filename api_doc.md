@@ -45,35 +45,47 @@ eg:
 
 * /paper
 
-      "id",
-      "title",
-      "author": [
-        {
-          "author_id",
-          "author_name"
-        }
-      ],
-      "abstract",
-      "keyword": [
-        {
-          "keyword"
-        }
-      ]
+      {
+        "id": "FHBA_GoBkHD19ZAOxDmY",
+        "title": "gaodengshuxue",
+        "abstr": "gaodengshuxue的魅力",
+        "authors": [
+            {
+                "id": "aaabbbcccdddeeefffgg",
+                "name": "王泽"
+            }
+        ],
+        "keywords": [
+            "数学",
+            "科学"
+        ],
+        "pdf": "[图片]www.4399.com",
+        "year": 2019
+    }
+
       
 author和keyword都是数组，因为可能不止一个。
 
 * /search
 
-      "outcomeId",
-      "title",
-      "time",
-      "author": [
+      {
+        "id": "FHBA_GoBkHD19ZAOxDmY",
+        "title": "gaodengshuxue",
+        "abstr": "gaodengshuxue的魅力",
+        "authors": [
             {
-                  "author_id",
-                  "author_name"
+                "id": "aaabbbcccdddeeefffgg",
+                "name": "王泽"
             }
-      ],
-      "source"
+        ],
+        "keywords": [
+            "数学",
+            "科学"
+        ],
+        "pdf": "[图片]www.4399.com",
+        "year": 2019
+    }
+
       
 * /search/count
 
