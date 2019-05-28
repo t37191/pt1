@@ -27,7 +27,7 @@ public class Expert extends User {
     public Expert(User user,String dep,String post) {
         this.setUser_id(user.getUser_id());
         this.setAge(user.getAge());
-        this.setContact(user.getContact());
+        this.setEmail(user.getEmail());
         this.setPassword(user.getPassword());
         this.setUsername(user.getUsername());
         this.setDep(dep);

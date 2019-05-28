@@ -40,8 +40,8 @@ public class User implements Serializable, UserDetails {
 
     @Setter
     @Getter
-    @Column(name = "contact")
-    protected Integer contact;
+    @Column(name = "email")
+    protected String email;
 
     @Setter
     @Getter

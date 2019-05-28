@@ -7,6 +7,7 @@ import com.example.paper_proj.Domain.Repository.ExpertRepository;
 import com.example.paper_proj.Domain.Repository.UserRepository;
 import com.example.paper_proj.Domain.User;
 import com.example.paper_proj.Utils.JWTTokenUtil;
+import org.elasticsearch.common.collect.Tuple;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -49,7 +50,7 @@ public class UserService  {
     BCryptPasswordEncoder bCryptPasswordEncoder;
 
     //用户登录授权token
-    public String login( String username, String password ) {
+    public Tuple<String,Integer> login(String username, String password ) {
         UsernamePasswordAuthenticationToken upToken = new UsernamePasswordAuthenticationToken( username, password );
         final Authentication authentication = authenticationManager.authenticate(upToken);
         SecurityContextHolder.getContext().setAuthentication(authentication);
@@ -57,11 +58,12 @@ public class UserService  {
         HttpServletResponse response = ((ServletRequestAttributes)RequestContextHolder.getRequestAttributes()).getResponse();
         String token=jwtTokenUtil.generateToken(userDetails);
         response.addHeader("Authorization", "Bearer " + token);
-        return token;
+        User user = userRepository.findByUsername(username);
+        return new Tuple<>(token,user.getUser_id());
     }
 
     //注册
-    public User signupComUser(User user){
+    public User signupUser(User user){
         user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
         user.setAuth("user");
         return userRepository.save(user);

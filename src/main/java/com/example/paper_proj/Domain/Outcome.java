@@ -10,29 +10,28 @@ import javax.persistence.Id;
 import java.util.List;
 
 @Data
-@Document(indexName = "aminer", type = "_doc", replicas = 0)
+@Document(indexName = "aminer",type = "_doc",replicas = 0)
 public class Outcome {
     @Id
-   // @Field(index = false, type = FieldType.Integer)
     protected String id;
 
-    @Field(type = FieldType.Text)
+    @Field(type = FieldType.Text )
     protected String title;
 
     @Field(type = FieldType.Text)
     protected String abstr;
 
-    @Field(index = false, type = FieldType.Text)
-    protected String pdf;
-
-    @Field(type = FieldType.Integer)
-    protected Integer year;
-
     @Field(type = FieldType.Nested)
     protected List<Author> authors;
 
     @Field(type = FieldType.Text)
-    protected List<String> keywords;
+    protected List<String> keywords ;
+
+    @Field(index = false, type=FieldType.Text)
+    protected String pdf;
+
+    @Field(type = FieldType.Integer)
+    protected Integer year;
 
 //    @OneToMany(mappedBy = "outcome",cascade = CascadeType.ALL)
 //    @Getter
