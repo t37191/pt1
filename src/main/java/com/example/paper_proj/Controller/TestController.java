@@ -10,8 +10,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import javax.servlet.http.HttpServletResponse;
-
 @RestController
 public class TestController {
 
@@ -46,13 +44,13 @@ public class TestController {
         return "403";
     }
 
-//     登录
-    @RequestMapping(value = "/authentication/login", method = RequestMethod.POST)
-    public String createToken(String username, String password, HttpServletResponse response) throws AuthenticationException {
-        String token=authService.login( username, password ); // 登录成功会返回JWT Token给用户
-        response.addHeader("Authorization", "Bearer " + token);
-        return token;
-    }
+////     登录
+//    @RequestMapping(value = "/authentication/login", method = RequestMethod.POST)
+//    public String createToken(String username, String password, HttpServletResponse response) throws AuthenticationException {
+//        String token=authService.login( username, password ); // 登录成功会返回JWT Token给用户
+//        response.addHeader("Authorization", "Bearer " + token);
+//        return token;
+//    }
 
     // 注册
 //    @RequestMapping(value = "/authentication/register", method = RequestMethod.POST)

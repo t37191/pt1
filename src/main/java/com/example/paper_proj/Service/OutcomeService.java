@@ -54,6 +54,11 @@ public class OutcomeService {
         return list;
     }
 
+    //获取单片论文信息
+    public Outcome getOutcome(String id){
+        return outcomeRepository.findById(id).get();
+    }
+
     //增加论文
     public Outcome addOutcome(Outcome outcome){
         return outcomeRepository.save(outcome);

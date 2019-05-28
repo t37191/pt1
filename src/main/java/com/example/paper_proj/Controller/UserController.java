@@ -5,10 +5,8 @@ import com.example.paper_proj.Domain.User;
 import com.example.paper_proj.Service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
-import org.springframework.security.core.AuthenticationException;
 import org.springframework.web.bind.annotation.*;
 
-import javax.servlet.http.HttpServletResponse;
 import java.util.List;
 
 
@@ -32,19 +30,19 @@ public class UserController {
 
     @PostMapping(value = "/signup-user")
     public User signupUser(@RequestBody User user){
-        return userService.signupComUser(user);
+        return userService.signupUser(user);
     }
 
     @PostMapping(value = "/signup-admin")
     public Admin signupAdmin(@RequestBody Admin admin) {return userService.signupAdmin(admin);}
 
-    @PostMapping(value = "/login")
-    @ResponseBody
-    public String createToken(@RequestBody User user, HttpServletResponse response) throws AuthenticationException {
-        String token=userService.login( user.getUsername(), user.getPassword()); // 登录成功会返回JWT Token给用户
-        //response.addHeader("Authorization", "Bearer " + token);
-        return token;
-    }
+//    @PostMapping(value = "/login")
+//    @ResponseBody
+//    public String createToken(@RequestBody User user, HttpServletResponse response) throws AuthenticationException {
+//        String token=userService.login( user.getUsername(), user.getPassword()); // 登录成功会返回JWT Token给用户
+//        //response.addHeader("Authorization", "Bearer " + token);
+//        return token;
+//    }
 
     @DeleteMapping(value = "/{username}")
     @PreAuthorize("hasAuthority('admin')")
