@@ -3,7 +3,6 @@ package com.example.paper_proj.Security;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.http.HttpMethod;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
@@ -40,23 +39,24 @@ public class WebScurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure( HttpSecurity httpSecurity ) throws Exception {
 
         httpSecurity.csrf().disable()
-                .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS).and()
-                .authorizeRequests()
-                .antMatchers(HttpMethod.OPTIONS, "/**").permitAll()
-                .antMatchers(HttpMethod.GET,"/api/user/**").permitAll()
-                .antMatchers(HttpMethod.POST,"/api/user/**").permitAll()
-                .antMatchers(HttpMethod.DELETE,"/api/user/**").permitAll()
-                .antMatchers(HttpMethod.PUT,"/api/user/**").permitAll()
-                .antMatchers(HttpMethod.POST,"/api/paper").permitAll()
-                .antMatchers(HttpMethod.GET,"/api/paper/**").permitAll()
-                .antMatchers(HttpMethod.GET,"api/outcome/**").permitAll()
-                .antMatchers(HttpMethod.GET,"/api/outcome/**").permitAll()
-                .antMatchers(HttpMethod.GET,"/api/paper").permitAll()
-                .antMatchers(HttpMethod.POST,"/api/keyword").permitAll()
-                .antMatchers(HttpMethod.POST).authenticated()
-                .antMatchers(HttpMethod.PUT).authenticated()
-                .antMatchers(HttpMethod.DELETE).authenticated()
-                .antMatchers(HttpMethod.GET).authenticated();
+                .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
+    //.and()
+//                .authorizeRequests()
+////                .antMatchers(HttpMethod.OPTIONS, "/**").permitAll()
+////                .antMatchers(HttpMethod.GET,"/api/user/**").permitAll()
+////                .antMatchers(HttpMethod.POST,"/api/user/**").permitAll()
+////                .antMatchers(HttpMethod.DELETE,"/api/user/**").permitAll()
+////                .antMatchers(HttpMethod.PUT,"/api/user/**").permitAll()
+////                .antMatchers(HttpMethod.POST,"/api/paper").permitAll()
+////                .antMatchers(HttpMethod.GET,"/api/paper/**").permitAll()
+////                .antMatchers(HttpMethod.POST,"/api/outcome/**").permitAll()
+////                .antMatchers(HttpMethod.GET,"/api/outcome/**").permitAll()
+////                .antMatchers(HttpMethod.GET,"/api/paper").permitAll()
+////                .antMatchers(HttpMethod.POST,"/api/keyword").permitAll()
+////                .antMatchers(HttpMethod.POST).authenticated()
+////                .antMatchers(HttpMethod.PUT).authenticated()
+////                .antMatchers(HttpMethod.DELETE).authenticated()
+////                .antMatchers(HttpMethod.GET).authenticated();
 
         httpSecurity
                 .addFilterBefore(authenticationTokenFilterBean(), UsernamePasswordAuthenticationFilter.class);

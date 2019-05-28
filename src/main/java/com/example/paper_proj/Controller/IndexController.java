@@ -20,14 +20,14 @@ public class IndexController {
         return outcomeService.getByKeyWords(keywords);
     }
 
-//    @GetMapping("/getByAuthors")
-//    public List<Outcome> getOutcomeByAuthor(@RequestParam("authors")String authors){
-//        return outcomeService.getByAuthors(authors);
-//    }
+    @GetMapping("/getByAuthors")
+    public List<Outcome> getOutcomeByAuthor(@RequestParam("authors")String authors){
+        return outcomeService.getByAuthors(authors);
+    }
 
-    @GetMapping("/getByTitleAndAbstr")
-    public List<Outcome> getOutcomeByTitAndAbstr(@RequestParam("title")String title,@RequestParam("abstract")String abstr){
-        return outcomeService.getByTitleAndAbstr(title,abstr);
+    @GetMapping("/getByTitleOrAbstr")
+    public List<Outcome> getOutcomeByTitOrAbstr(@RequestParam("word")String word){
+        return outcomeService.getByTitleOrAbstr(word);
     }
 
     /*
