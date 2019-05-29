@@ -10,12 +10,12 @@ public interface OutcomeRepository extends ElasticsearchRepository<Outcome,Strin
     查找
      */
 
-    List<Outcome> findAllByTitleContaining(String word);
-    List<Outcome> findAllByAbstrContaining(String word);
+    List<Outcome> findAllByTitleOrAbstr(String word);
 
     List<Outcome> findAllByKeywords(String keywords);
+    List<Outcome> findAllByAuthorsContaining(String author);
     /*
     删除
      */
-//    public void deleteById(String id);
+    public void deleteById(String id);
 }

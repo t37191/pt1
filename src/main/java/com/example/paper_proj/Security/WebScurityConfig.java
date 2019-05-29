@@ -40,23 +40,22 @@ public class WebScurityConfig extends WebSecurityConfigurerAdapter {
 
         httpSecurity.csrf().disable()
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
-    //.and()
 //                .authorizeRequests()
-////                .antMatchers(HttpMethod.OPTIONS, "/**").permitAll()
-////                .antMatchers(HttpMethod.GET,"/api/user/**").permitAll()
-////                .antMatchers(HttpMethod.POST,"/api/user/**").permitAll()
-////                .antMatchers(HttpMethod.DELETE,"/api/user/**").permitAll()
-////                .antMatchers(HttpMethod.PUT,"/api/user/**").permitAll()
-////                .antMatchers(HttpMethod.POST,"/api/paper").permitAll()
-////                .antMatchers(HttpMethod.GET,"/api/paper/**").permitAll()
-////                .antMatchers(HttpMethod.POST,"/api/outcome/**").permitAll()
-////                .antMatchers(HttpMethod.GET,"/api/outcome/**").permitAll()
-////                .antMatchers(HttpMethod.GET,"/api/paper").permitAll()
-////                .antMatchers(HttpMethod.POST,"/api/keyword").permitAll()
-////                .antMatchers(HttpMethod.POST).authenticated()
-////                .antMatchers(HttpMethod.PUT).authenticated()
-////                .antMatchers(HttpMethod.DELETE).authenticated()
-////                .antMatchers(HttpMethod.GET).authenticated();
+//                .antMatchers(HttpMethod.OPTIONS, "/**").permitAll()
+//                .antMatchers(HttpMethod.GET,"/api/user/**").permitAll()
+//                .antMatchers(HttpMethod.POST,"/api/user/**").permitAll()
+//                .antMatchers(HttpMethod.DELETE,"/api/user/**").permitAll()
+//                .antMatchers(HttpMethod.PUT,"/api/user/**").permitAll()
+//                .antMatchers(HttpMethod.POST,"/api/paper").permitAll()
+//                .antMatchers(HttpMethod.GET,"/api/paper/**").permitAll()
+//                .antMatchers(HttpMethod.GET,"/api/outcome/**").permitAll()
+//                .antMatchers(HttpMethod.POST,"/api/outcome/**").permitAll()
+//                .antMatchers(HttpMethod.GET,"/api/paper").permitAll()
+//                .antMatchers(HttpMethod.POST,"/api/keyword").permitAll()
+//                .antMatchers(HttpMethod.POST).authenticated()
+//                .antMatchers(HttpMethod.PUT).authenticated()
+//                .antMatchers(HttpMethod.DELETE).authenticated()
+//                .antMatchers(HttpMethod.GET).authenticated();
 
         httpSecurity
                 .addFilterBefore(authenticationTokenFilterBean(), UsernamePasswordAuthenticationFilter.class);
