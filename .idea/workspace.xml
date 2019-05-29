@@ -1,51 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="58e25a6b-34ff-4b09-992d-97ff0f1f4065" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/paper_proj/Controller/BbsController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/paper_proj/Domain/Favorites.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/paper_proj/Domain/Repository/FavoritesRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/paper_proj/Domain/Repository/TopicRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/paper_proj/Domain/Topic.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/paper_proj/Service/BbsService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/example/paper_proj/Conf/TokenConf.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/example/paper_proj/Controller/TestController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/example/paper_proj/Controller/UserController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/example/paper_proj/DdemoApplication.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/example/paper_proj/Domain/Admin.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/example/paper_proj/Domain/Author.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/example/paper_proj/Domain/Expert.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/example/paper_proj/Domain/Keyword.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/example/paper_proj/Domain/Outcome.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/example/paper_proj/Domain/Repository/AdminRepository.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/example/paper_proj/Domain/Repository/ExpertRepository.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/example/paper_proj/Domain/Repository/KeywordRepository.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/example/paper_proj/Domain/Repository/UserRepository.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/example/paper_proj/Domain/User.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/example/paper_proj/Security/JWTTokenFilter.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/example/paper_proj/Security/UserDetailsServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/example/paper_proj/Service/UserService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/example/paper_proj/Utils/JWTTokenUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/paper_proj/Controller/BBS_ReplyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/paper_proj/Controller/BBS_ReplyController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/paper_proj/Controller/BBS_SectionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/paper_proj/Controller/BBS_SectionController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/paper_proj/Controller/IndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/paper_proj/Controller/IndexController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/paper_proj/Domain/Repository/bbsReplyRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/paper_proj/Domain/Repository/bbsReplyRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/paper_proj/Domain/Repository/bbsSectionRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/paper_proj/Domain/Repository/bbsSectionRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/paper_proj/Security/WebScurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/paper_proj/Security/WebScurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/paper_proj/Service/OutcomeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/paper_proj/Service/OutcomeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/paper_proj/Service/bbsReplyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/paper_proj/Service/bbsReplyService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/paper_proj/Service/bbsSectionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/paper_proj/Service/bbsSectionService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/paper_proj/Controller/ApiController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/paper_proj/Controller/ApiController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/paper_proj/Controller/BBS_ReplyController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/paper_proj/Controller/BBS_ReplyController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/paper_proj/Controller/IndexController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/paper_proj/Controller/IndexController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/paper_proj/Domain/Repository/bbsReplyRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/paper_proj/Domain/Repository/bbsReplyRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/paper_proj/Security/WebScurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/paper_proj/Security/WebScurityConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/paper_proj/Service/OutcomeService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/paper_proj/Service/OutcomeService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/paper_proj/Service/bbsReplyService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/paper_proj/Service/bbsReplyService.class" afterDir="false" />
-    </list>
+    <list default="true" id="58e25a6b-34ff-4b09-992d-97ff0f1f4065" name="Default Changelist" comment="BBS基础功能" />
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -79,8 +35,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/example/paper_proj/Controller/BbsController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="19">
-              <caret line="21" column="22" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
+            <state relative-caret-position="323">
+              <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#934#935#0" expanded="true" />
@@ -469,7 +425,7 @@
       <workItem from="1558787805081" duration="5331000" />
       <workItem from="1558958870511" duration="1671000" />
       <workItem from="1558962284252" duration="6449000" />
-      <workItem from="1559041089277" duration="11584000" />
+      <workItem from="1559041089277" duration="11891000" />
     </task>
     <servers />
   </component>
@@ -506,7 +462,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="134361000" />
+    <option name="totallyTimeSpent" value="134668000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="124" y="0" width="1191" height="820" extended-state="0" />
@@ -584,6 +540,10 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="BBS基础功能" />
+    <option name="LAST_COMMIT_MESSAGE" value="BBS基础功能" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/java/com/example/ddemo/Security/WebSecurityConfig.java" />
@@ -937,8 +897,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/example/paper_proj/Controller/BbsController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="21" column="22" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
+        <state relative-caret-position="323">
+          <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#934#935#0" expanded="true" />
