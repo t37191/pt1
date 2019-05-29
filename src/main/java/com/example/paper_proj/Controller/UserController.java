@@ -49,9 +49,6 @@ public class UserController {
         }
     }
 
-    //按用户id删除
-    @DeleteMapping("/")
-
     //修改信息
     @PutMapping(value = "/update")
     @PreAuthorize("hasAuthority('admin,user')")
