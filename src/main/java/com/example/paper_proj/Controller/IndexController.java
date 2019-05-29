@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping
+@RequestMapping("/index")
 @CrossOrigin(origins = "http://localhost:8000")
 public class IndexController {
     @Autowired

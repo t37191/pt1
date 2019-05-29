@@ -13,14 +13,13 @@ public interface bbsReplyRepository extends JpaRepository<bbsReply,Integer> {
      */
     //获取用户回复列表
     public List<bbsReply> getByUseridOrderByReplytimeDesc(Integer user_id);
-    //获取帖子回复列表
-    public List<bbsReply> getByTopicidOrderByReplytimeDesc(Integer topic_id);
 
-    //通过回复的帖子id和回复的id来获取回复列表
-    List<bbsReply> getAllByTopicidAndRreplyidOrderByReplytimeDesc(Integer topic_id, Integer r_reply_id);
 
-    //获取某个回复下面的回复数量
-    Integer countByRreplyid(Integer r_reply_id);
+    //通过帖子id获取所有回复
+    List<bbsReply> getByTopicidAndAndReplytypeOrderByReplytimeDesc(Integer topic_id,Integer reply_type);
+
+    //获取某个回复下面的回复
+    List<bbsReply> getByRreplyidOrderByReplytimeDesc(Integer r_reply_id);
 
     //删除回复
     @Transactional

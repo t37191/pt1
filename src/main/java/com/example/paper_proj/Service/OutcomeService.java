@@ -25,6 +25,8 @@ public class OutcomeService {
         return outcomeRepository.findAllByAuthorsContaining(author);
     }
 
+    public Outcome getOutcome(String id){return outcomeRepository.findById(id).get();}
+
     //增加论文
     public Outcome addOutcome(Outcome outcome){
         return outcomeRepository.save(outcome);

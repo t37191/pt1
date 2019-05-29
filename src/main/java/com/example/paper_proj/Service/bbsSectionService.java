@@ -17,6 +17,7 @@ public class bbsSectionService {
     public List<bbsSection> getAllSection(){
         return bbs_sectionRepository.findAll();
     }
+
     //通过板块名查找板块
     public bbsSection getByName(String section_name){
         return bbs_sectionRepository.findByName(section_name);
