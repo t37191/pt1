@@ -106,3 +106,10 @@ eg：/search/count?type=fulltext&_contenet=asadsasdad&_start=0&_limit=10
       "token",
       "user_id",
       "user_name"
+
+* /user/refreshtoken
+
+传入旧token，返回新token或null
+eg./user/refreshtoken?_token=baskdlakjdfk
+
+      

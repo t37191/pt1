@@ -95,7 +95,9 @@ public class JWTTokenUtil implements Serializable {
     }
 
     public Boolean canTokenBeRefreshed(String token) {
-        return !isTokenExpired(token);
+        Date expiredate = getExpirationDateFromToken(token);
+        Date nowdate = new Date();
+        return expiredate.getTime() - nowdate.getTime() <= 180000;
     }
 
     public String refreshToken(String token) {

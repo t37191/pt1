@@ -1,6 +1,5 @@
 package com.example.paper_proj.Controller;
 
-import com.example.paper_proj.Domain.Admin;
 import com.example.paper_proj.Domain.User;
 import com.example.paper_proj.Service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,48 +10,54 @@ import java.util.List;
 
 
 @RestController
-@RequestMapping("api/user")
+@RequestMapping("/admin")
 public class UserController {
     @Autowired
     private UserService userService;
 
+    //查看所有用户
     @GetMapping(value = "/userlist")
-//    @PreAuthorize("hasAnyAuthority('admin','user')")
+    @PreAuthorize("hasAnyAuthority('admin')")
     public List<User> getAll(){
         return userService.getAllUsers();
     }
 
+    //按用户名查看
     @GetMapping(value = "/{username}")
     @PreAuthorize("hasAuthority('admin')")
     public User getUser(@PathVariable("username") String username){
         return userService.getByName(username);
     }
 
-    @PostMapping(value = "/signup-user")
-    public User signupUser(@RequestBody User user){
-        return userService.signupUser(user);
-    }
+//    @PostMapping(value = "/signup-admin")
+//    public Admin signupAdmin(@RequestBody Admin admin) {return userService.signupAdmin(admin);}
 
-    @PostMapping(value = "/signup-admin")
-    public Admin signupAdmin(@RequestBody Admin admin) {return userService.signupAdmin(admin);}
-
-//    @PostMapping(value = "/login")
-//    @ResponseBody
-//    public String createToken(@RequestBody User user, HttpServletResponse response) throws AuthenticationException {
-//        String token=userService.login( user.getUsername(), user.getPassword()); // 登录成功会返回JWT Token给用户
-//        //response.addHeader("Authorization", "Bearer " + token);
-//        return token;
-//    }
-
-    @DeleteMapping(value = "/{username}")
+    //删除用户
+    @DeleteMapping("/delete")
     @PreAuthorize("hasAuthority('admin')")
-    public void deleteUser(@PathVariable("username") String username){
-        userService.deleteUserByName(username);
+    public void deleteUser(@RequestParam("_type")String type,@RequestParam("_content")String content ){
+        if(type.equals("byname")){
+            userService.deleteUserByName(content);
+        }
+        else if(type.equals("byid")){
+            try{
+                int id = Integer.parseInt(content);
+                userService.deleteUserById(id);
+            }catch (Exception e){
+
+            }
+        }
     }
 
+    //按用户id删除
+    @DeleteMapping("/")
+
+    //修改信息
     @PutMapping(value = "/update")
-    @PreAuthorize("hasAuthority('admin')")
+    @PreAuthorize("hasAuthority('admin,user')")
     public User updateUser(@RequestBody User user){
         return userService.updateUser(user);
     }
+
+
 }

@@ -1,7 +1,6 @@
 package com.example.paper_proj.Service;
 
 import com.example.paper_proj.Domain.Admin;
-import com.example.paper_proj.Domain.Expert;
 import com.example.paper_proj.Domain.Repository.AdminRepository;
 import com.example.paper_proj.Domain.Repository.ExpertRepository;
 import com.example.paper_proj.Domain.Repository.UserRepository;
@@ -18,10 +17,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
-import org.springframework.web.context.request.RequestContextHolder;
-import org.springframework.web.context.request.ServletRequestAttributes;
 
-import javax.servlet.http.HttpServletResponse;
 import java.util.List;
 
 @Service
@@ -55,9 +51,7 @@ public class UserService  {
         final Authentication authentication = authenticationManager.authenticate(upToken);
         SecurityContextHolder.getContext().setAuthentication(authentication);
         final UserDetails userDetails = userDetailsService.loadUserByUsername( username );
-        HttpServletResponse response = ((ServletRequestAttributes)RequestContextHolder.getRequestAttributes()).getResponse();
         String token=jwtTokenUtil.generateToken(userDetails);
-        response.addHeader("Authorization", "Bearer " + token);
         User user = userRepository.findByUsername(username);
         return new Tuple<>(token,user.getUser_id());
     }
@@ -69,12 +63,25 @@ public class UserService  {
         return userRepository.save(user);
     }
 
-    public Expert signupExpert(User user,String Dep,String Post){
-        Expert expert=new Expert(user,Dep,Post);
-        expert.setPassword(bCryptPasswordEncoder.encode(expert.getPassword()));
-        expert.setAuth("expert");
-        return expertRepository.save(expert);
+    //刷新token
+    public String refreshUser(String token){
+        if(jwtTokenUtil.canTokenBeRefreshed(token)){
+            return jwtTokenUtil.refreshToken(token);
+        }
+        return null;
     }
+
+//    //注销登录
+//    public String logout(){
+//
+//    }
+
+//    public Expert signupExpert(User user,String Dep,String Post){
+//        Expert expert=new Expert(user,Dep,Post);
+//        expert.setPassword(bCryptPasswordEncoder.encode(expert.getPassword()));
+//        expert.setAuth("expert");
+//        return expertRepository.save(expert);
+//    }
 
     public Admin signupAdmin(Admin admin){
         admin.setPassword(bCryptPasswordEncoder.encode(admin.getPassword()));

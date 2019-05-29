@@ -98,4 +98,10 @@ public class ApiController {
             return jsonObject.toString();
         }
     }
+
+    //刷新token
+    @GetMapping("/user/refreshtoken")
+    public String tokenRefresh(@RequestParam("_token") String token){
+        return userService.refreshUser(token);
+    }
 }
