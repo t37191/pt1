@@ -5,6 +5,8 @@ import com.example.paper_proj.Domain.ESIndexDomain.AuthorIndex;
 import com.example.paper_proj.Domain.Outcome;
 import com.example.paper_proj.Domain.Repository.OutcomeRepository;
 import com.google.common.collect.Lists;
+import net.sf.json.JSONArray;
+import net.sf.json.JSONObject;
 import org.apache.http.HttpHost;
 import org.elasticsearch.action.search.SearchRequest;
 import org.elasticsearch.action.search.SearchResponse;
@@ -17,9 +19,7 @@ import org.elasticsearch.index.query.QueryBuilders;
 import org.elasticsearch.search.SearchHit;
 import org.elasticsearch.search.SearchHits;
 import org.elasticsearch.search.builder.SearchSourceBuilder;
-import org.json.JSONArray;
 import org.json.JSONException;
-import org.json.JSONObject;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -53,8 +53,9 @@ public class EsDemoApplicationTests {
 
     @Test
     public void analyserTest() throws IOException, JSONException {
+        String word = "nature";
         RestHighLevelClient client = new RestHighLevelClient(RestClient.builder(new HttpHost("localhost", 9200)));
-        QueryBuilder matchQuery = QueryBuilders.matchQuery("title","nature of sports").analyzer("standard");
+        QueryBuilder matchQuery = QueryBuilders.matchQuery("title",word).analyzer("standard");
         SearchSourceBuilder sourceBuilder = new SearchSourceBuilder();
         sourceBuilder.query(matchQuery);
         sourceBuilder.from(0);
@@ -66,23 +67,21 @@ public class EsDemoApplicationTests {
         SearchResponse searchResponse = client.search(searchRequest,RequestOptions.DEFAULT);
         SearchHits hits = searchResponse.getHits();
         SearchHit[] searchHits = hits.getHits();
-        long totalHits = hits.getTotalHits();
-        JSONObject objects = new JSONObject();
-        JSONArray array = new JSONArray();
+        List<Outcome> outcomes = new ArrayList<>();
+        JSONArray jsonArray = new JSONArray();
+        int cnt = 0;
         for(SearchHit hit : searchHits){
-            System.out.println(hit.toString());
-            Map<String,Object> sourceAsMap = hit.getSourceAsMap();
+            if(cnt++ > 10)
+                break;
+            Map source = hit.getSourceAsMap();
             JSONObject jsonObject = new JSONObject();
-            jsonObject.put("id",(String)sourceAsMap.get("id"));
-            jsonObject.put("title",(String) sourceAsMap.get("title"));
-            jsonObject.put("abstr",(String)sourceAsMap.get("abstr"));
-            jsonObject.put("authors",(List<Author>)sourceAsMap.get("authors"));
-            jsonObject.put("keywords",(List<String>)sourceAsMap.get("keywords"));
-            jsonObject.put("pdf",(String)sourceAsMap.get("pdf"));
-            jsonObject.put("year",(Integer)sourceAsMap.get("year"));
-            jsonObject.put("url",(List<String>)sourceAsMap.get("url"));
-            jsonObject.put("doi",(String)sourceAsMap.get("doi"));
+            jsonObject.put("id",(String)source.get("id"));
+            jsonObject.put("keywords",(List<String>)source.get("keywords"));
+            jsonObject.put("authors",(List<Author>)source.get("authors"));
+            jsonArray.add(jsonObject);
         }
+        System.out.println(jsonArray.toString());
+        System.out.println(outcomes.size());
     }
 
     @Test
@@ -98,5 +97,13 @@ public class EsDemoApplicationTests {
         for(Object id : set.toArray()){
             output.add(outcomeRepository.findById(id.toString()).get());
         }
+    }
+
+    @Test
+    public void jsonTest(){
+        List<String> list = new ArrayList<>();
+        list.add("{1}");
+        list.add("{2}");
+        System.out.println(list.toString());
     }
 }

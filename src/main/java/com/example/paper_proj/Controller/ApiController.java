@@ -4,9 +4,10 @@ import com.example.paper_proj.Domain.Outcome;
 import com.example.paper_proj.Domain.User;
 import com.example.paper_proj.Service.OutcomeService;
 import com.example.paper_proj.Service.UserService;
+import net.sf.json.JSONArray;
+import net.sf.json.JSONObject;
 import org.elasticsearch.common.collect.Tuple;
 import org.json.JSONException;
-import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.web.bind.annotation.*;
@@ -24,7 +25,7 @@ public class ApiController {
     @Autowired
     private UserService userService;
 
-    private List<Outcome> list;
+    private JSONArray list;
 
     //查询服务
     @GetMapping("/search")
@@ -44,21 +45,27 @@ public class ApiController {
             list = outcomeService.getByKeyWords(content);
         }
         else if(type.equals("author")){
-            list = outcomeService.getByAuthors(content);
+            list = outcomeService.getByAuthor(content);
         }
         else if(type.equals("titab")){
-            list = outcomeService.getByTitleOrAbstr(content);
+            list = outcomeService.getByTitle(content);
         }
         else {
-            list = new ArrayList<>();
+            list = new JSONArray();
         }
         return list.size();
     }
 
     //论文详情页
     @GetMapping("/paper")
-    public Outcome getOutcome(@RequestParam("id")String id){
+    public String getOutcome(@RequestParam("id")String id) throws IOException {
         return outcomeService.getOutcome(id);
+    }
+
+    //获得专家详情
+    @GetMapping("/expert")
+    public String getExpert(@RequestParam("id")String id) throws IOException{
+        return outcomeService.getExpert(id);
     }
 
     //用户登陆

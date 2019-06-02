@@ -113,6 +113,52 @@ eg：/search/count?type=fulltext&_contenet=asadsasdad&_start=0&_limit=10
 eg./user/refreshtoken?_token=baskdlakjdfk
 
 
+* /expert
+
+获得专家详细信息，其中：
+
+pubs.r : 第几作者
+
+pubs.i : 论文id
+
+tags.t : 领域名
+
+tags.w : 领域权重
+
+      {
+        "id": "562d4f6e45ce1e59678685fc",
+        "name": "Skerritt Geoff C",
+        "n_pubs": 2,
+        "pubs": [
+          {
+            "r": 3,
+            "i": "55a463a265ce31bc8778f692"
+          },
+          {
+            "r": 8,
+            "i": "55a4192965ce5cd7b3c40ae6"
+          }
+        ],
+        "tags": [
+          {
+            "t": "Diagnosis",
+            "w": 1
+          },
+          {
+            "t": "Magnetic Resonance Imaging",
+            "w": 1
+          },
+          {
+            "t": "Helminths",
+            "w": 1
+          },
+          {
+            "t": "Central Nervous System",
+            "w": 1
+          }
+        ]
+      }
+
 * /admin
 TODO
       

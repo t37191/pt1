@@ -19,18 +19,18 @@ public class IndexController {
     查询服务
      */
     @GetMapping("/search/keyword")
-    public List<Outcome> getOutcomeByKeywords(@RequestParam("keywords")String keywords){
+    public List<Outcome> getOutcomeByKeywords(@RequestParam("keywords")String keywords) throws IOException {
         return outcomeService.getByKeyWords(keywords);
     }
 
     @GetMapping("/getByAuthors")
-    public List<Outcome> getOutcomeByAuthor(@RequestParam("authors")String authors){
-        return outcomeService.getByAuthors(authors);
+    public List<Outcome> getOutcomeByAuthor(@RequestParam("authors")String authors) throws IOException {
+        return outcomeService.getByAuthor(authors);
     }
 
     @GetMapping("/getByTitleOrAbstr")
     public List<Outcome> getOutcomeByTitOrAbstr(@RequestParam("word")String word) throws IOException, JSONException {
-        return outcomeService.getByTitleOrAbstr(word);
+        return outcomeService.getByTitle(word);
     }
 
     /*
