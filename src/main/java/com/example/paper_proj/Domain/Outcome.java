@@ -1,6 +1,7 @@
 package com.example.paper_proj.Domain;
 
 
+import com.example.paper_proj.Domain.ESIndexDomain.Author;
 import lombok.Data;
 import org.springframework.data.elasticsearch.annotations.Document;
 import org.springframework.data.elasticsearch.annotations.Field;
@@ -32,6 +33,12 @@ public class Outcome {
 
     @Field(type = FieldType.Integer)
     protected Integer year;
+
+    @Field(type = FieldType.Text)
+    protected List<String> url;
+
+    @Field(type = FieldType.Text)
+    protected String doi;
 
 //    @OneToMany(mappedBy = "outcome",cascade = CascadeType.ALL)
 //    @Getter

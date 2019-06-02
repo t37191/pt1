@@ -65,9 +65,12 @@ public class UserService  {
 
     //刷新token
     public String refreshUser(String token){
-        if(jwtTokenUtil.canTokenBeRefreshed(token)){
+        Integer flag = jwtTokenUtil.canTokenBeRefreshed(token);
+        if( flag == 1){
             return jwtTokenUtil.refreshToken(token);
         }
+        else if(flag == 0)
+            return token;
         return null;
     }
 

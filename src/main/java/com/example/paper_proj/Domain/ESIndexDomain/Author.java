@@ -1,4 +1,4 @@
-package com.example.paper_proj.Domain;
+package com.example.paper_proj.Domain.ESIndexDomain;
 
 import lombok.Getter;
 import lombok.Setter;

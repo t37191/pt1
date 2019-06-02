@@ -94,10 +94,18 @@ public class JWTTokenUtil implements Serializable {
                 .compact();
     }
 
-    public Boolean canTokenBeRefreshed(String token) {
-        Date expiredate = getExpirationDateFromToken(token);
-        Date nowdate = new Date();
-        return expiredate.getTime() - nowdate.getTime() <= 180000;
+    public Integer canTokenBeRefreshed(String token) {
+        try{
+            Date expiredate = getExpirationDateFromToken(token);
+            Date nowdate = new Date();
+            if(expiredate.getTime() - nowdate.getTime() <= TokenConf.REFRESH_TIME * 1000 &&
+                    expiredate.getTime() - nowdate.getTime() > 10)
+                return 1;
+            return 0;
+        }
+        catch (Exception e){
+            return -1;
+        }
     }
 
     public String refreshToken(String token) {

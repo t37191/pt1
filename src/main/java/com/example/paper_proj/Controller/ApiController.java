@@ -11,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.web.bind.annotation.*;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -38,7 +39,7 @@ public class ApiController {
 
     @GetMapping("/search/count")
     public int searchOutcomesCounts(@RequestParam("_type")String type,
-                                        @RequestParam("_content")String content){
+                                        @RequestParam("_content")String content) throws IOException, JSONException {
         if(type.equals("keywords")){
             list = outcomeService.getByKeyWords(content);
         }
