@@ -59,6 +59,7 @@ eg:
         ],
         "pdf": "[图片]www.4399.com",
         "year": 2019
+        "cnt" : 24
     }
 
       
@@ -82,6 +83,7 @@ author和keyword都是数组，因为可能不止一个。
         ],
         "pdf": "[图片]www.4399.com",
         "year": 2019
+        "cnt" : 24
     }
 
       
@@ -158,6 +160,10 @@ tags.w : 领域权重
           }
         ]
       }
+
+* /hotpapers
+    
+    返回点击量降序前100篇论文
 
 * /admin
 TODO

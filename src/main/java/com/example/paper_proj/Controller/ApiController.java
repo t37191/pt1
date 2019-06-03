@@ -1,6 +1,5 @@
 package com.example.paper_proj.Controller;
 
-import com.example.paper_proj.Domain.Outcome;
 import com.example.paper_proj.Domain.User;
 import com.example.paper_proj.Service.OutcomeService;
 import com.example.paper_proj.Service.UserService;
@@ -13,8 +12,6 @@ import org.springframework.security.core.AuthenticationException;
 import org.springframework.web.bind.annotation.*;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 
 @RestController
 @CrossOrigin(origins = "http://localhost:8000")
@@ -29,13 +26,13 @@ public class ApiController {
 
     //查询服务
     @GetMapping("/search")
-    public List<Outcome> searchOutcomes(@RequestParam("_type")String type,
+    public String searchOutcomes(@RequestParam("_type")String type,
                                         @RequestParam("_content")String content,
                                         @RequestParam("_start")Integer start,
                                         @RequestParam("_limit")Integer limit){
         if(start > list.size())
-            return new ArrayList<>();
-        return list.subList(start,Math.min(start+limit,list.size()));
+            return new JSONArray().toString();
+        return list.subList(start,Math.min(start+limit,list.size())).toString();
     }
 
     @GetMapping("/search/count")
@@ -59,13 +56,19 @@ public class ApiController {
     //论文详情页
     @GetMapping("/paper")
     public String getOutcome(@RequestParam("id")String id) throws IOException {
-        return outcomeService.getOutcome(id);
+        return outcomeService.getOutcome(id,true);
     }
 
     //获得专家详情
     @GetMapping("/expert")
     public String getExpert(@RequestParam("id")String id) throws IOException{
         return outcomeService.getExpert(id);
+    }
+
+    //获得热点论文
+    @GetMapping("/hotpapers")
+    public String hotPapers() throws IOException {
+        return outcomeService.hotPaper();
     }
 
     //用户登陆
