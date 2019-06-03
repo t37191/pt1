@@ -25,7 +25,7 @@ public class User implements Serializable, UserDetails {
     @Getter
     @Column(name = "user_id")
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     protected Integer user_id;
 
     @Setter
