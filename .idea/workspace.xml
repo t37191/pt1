@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="58e25a6b-34ff-4b09-992d-97ff0f1f4065" name="Default Changelist" comment="">
+<<<<<<< HEAD
       <change afterPath="$PROJECT_DIR$/src/main/java/com/example/paper_proj/Controller/AnnouncementController.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/com/example/paper_proj/Domain/Announcement.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/com/example/paper_proj/Domain/Repository/AnnouncementRepository.java" afterDir="false" />
@@ -39,6 +40,15 @@
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/paper_proj/Service/BbsService.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/paper_proj/Service/bbsReplyService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/paper_proj/Service/bbsReplyService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/paper_proj/Service/bbsSectionService.class" beforeDir="false" />
+=======
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/paper_proj/Domain/Repository/ClickRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/paper_proj/Domain/paperClick.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api_doc.md" beforeDir="false" afterPath="$PROJECT_DIR$/api_doc.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/paper_proj/Controller/ApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/paper_proj/Controller/ApiController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/paper_proj/Service/OutcomeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/paper_proj/Service/OutcomeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/paper_proj/Controller/ApiController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/paper_proj/Controller/ApiController.class" afterDir="false" />
+>>>>>>> ec6805196d73761f9e7ca507b26c2839d7fbb15c
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -69,13 +79,98 @@
     <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
+<<<<<<< HEAD
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+=======
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/paper_proj/Service/OutcomeService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="279">
+              <caret line="282" column="64" lean-forward="true" selection-start-line="282" selection-start-column="64" selection-end-line="282" selection-end-column="64" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#OutcomeService#0;class#OutcomeService#0" />
+                <element signature="method#addBuffer#0;class#OutcomeService#0" />
+                <element signature="method#getBuffer#0;class#OutcomeService#0" />
+                <element signature="method#getByTitle#0;class#OutcomeService#0" />
+                <element signature="method#getByKeyWords#0;class#OutcomeService#0" />
+                <element signature="method#getByAuthor#0;class#OutcomeService#0" />
+                <element signature="method#getOutcome#0;class#OutcomeService#0" />
+                <element signature="method#getExpert#0;class#OutcomeService#0" />
+                <element signature="e#12429#12430#0" expanded="true" />
+                <element signature="e#12483#12484#0" expanded="true" />
+                <element signature="e#12546#12547#0" expanded="true" />
+                <element signature="e#12600#12601#0" expanded="true" />
+                <element signature="e#12654#12655#0" expanded="true" />
+                <element signature="e#12702#12703#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/paper_proj/Domain/paperClick.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="350">
+              <caret line="27" column="25" lean-forward="true" selection-start-line="27" selection-start-column="25" selection-end-line="27" selection-end-column="25" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/paper_proj/Domain/Repository/ClickRepository.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="9" column="52" selection-start-line="9" selection-start-column="52" selection-end-line="9" selection-end-column="52" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/api_doc.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="326">
+                <caret line="165" column="18" selection-start-line="165" selection-start-column="18" selection-end-line="165" selection-end-column="18" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/paper_proj/Controller/ApiController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="57" column="78" selection-start-line="57" selection-start-column="78" selection-end-line="57" selection-end-column="78" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#searchOutcomes#0;class#ApiController#0" />
+                <element signature="method#searchOutcomesCounts#0;class#ApiController#0" />
+                <element signature="method#getOutcome#0;class#ApiController#0" />
+                <element signature="method#getExpert#0;class#ApiController#0" />
+                <element signature="method#userLogin#0;class#ApiController#0" />
+                <element signature="method#userSignup#0;class#ApiController#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+>>>>>>> ec6805196d73761f9e7ca507b26c2839d7fbb15c
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -91,6 +186,17 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+<<<<<<< HEAD
+=======
+        <option value="$PROJECT_DIR$/src/main/java/com/example/ddemo/Security/JWTTokenFilter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/ddemo/Service/UserDetailsServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/ddemo/Domain/User.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/ddemo/Utils/JWTTokenUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/ddemo/Security/UserDetailsServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/ddemo/Security/JWTLoginFilter.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/index.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/ddemo/Controller/TestController.java" />
+>>>>>>> ec6805196d73761f9e7ca507b26c2839d7fbb15c
         <option value="$PROJECT_DIR$/src/main/java/com/example/ddemo/Conf/TokenConf.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/ddemo/Domain/Repository/ExpertRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/ddemo/Domain/Repository/ComUserRepository.java" />
@@ -127,6 +233,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/example/paper_proj/Domain/Repository/OutcomeRepository.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/example/paper_proj/EsDemoApplicationTests.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/paper_proj/Controller/IndexController.java" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/src/main/java/com/example/paper_proj/Service/OutcomeService.java" />
         <option value="$PROJECT_DIR$/api_doc.md" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/paper_proj/Domain/User.java" />
@@ -142,6 +249,15 @@
         <option value="$PROJECT_DIR$/src/main/java/com/example/paper_proj/Service/AnnouncementService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/paper_proj/Controller/BBS_ReplyController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/paper_proj/Controller/AnnouncementController.java" />
+=======
+        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/paper_proj/Domain/User.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/paper_proj/Domain/paperClick.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/paper_proj/Domain/Repository/ClickRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/paper_proj/Service/OutcomeService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/paper_proj/Controller/ApiController.java" />
+        <option value="$PROJECT_DIR$/api_doc.md" />
+>>>>>>> ec6805196d73761f9e7ca507b26c2839d7fbb15c
       </list>
     </option>
   </component>
@@ -270,6 +386,7 @@
               <item name="Domain" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
             <path>
+<<<<<<< HEAD
               <item name="git" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
               <item name="paper_proj" type="2674bda8:ScopeViewTreeModel$GroupNode" />
               <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
@@ -280,6 +397,24 @@
               <item name="paper_proj" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="Domain" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="ESIndexDomain" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+=======
+              <item name="paper_proj" type="b2602c69:ProjectViewProjectNode" />
+              <item name="paper_proj" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="paper_proj" type="462c0819:PsiDirectoryNode" />
+              <item name="Controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="paper_proj" type="b2602c69:ProjectViewProjectNode" />
+              <item name="paper_proj" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="paper_proj" type="462c0819:PsiDirectoryNode" />
+              <item name="Domain" type="462c0819:PsiDirectoryNode" />
+>>>>>>> ec6805196d73761f9e7ca507b26c2839d7fbb15c
             </path>
             <path>
               <item name="git" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
@@ -294,6 +429,7 @@
               <item name="Repository" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
             <path>
+<<<<<<< HEAD
               <item name="git" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
               <item name="paper_proj" type="2674bda8:ScopeViewTreeModel$GroupNode" />
               <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
@@ -303,6 +439,22 @@
               <item name="example" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="paper_proj" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="Security" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+=======
+              <item name="paper_proj" type="b2602c69:ProjectViewProjectNode" />
+              <item name="paper_proj" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="paper_proj" type="462c0819:PsiDirectoryNode" />
+              <item name="Service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="paper_proj" type="b2602c69:ProjectViewProjectNode" />
+              <item name="paper_proj" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+>>>>>>> ec6805196d73761f9e7ca507b26c2839d7fbb15c
             </path>
             <path>
               <item name="git" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
@@ -541,6 +693,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="195114000" />
   </component>
   <component name="TodoView">
@@ -551,11 +704,18 @@
       <are-packages-shown value="true" />
       <is-autoscroll-to-source value="true" />
     </todo-panel>
+=======
+    <option name="totallyTimeSpent" value="179115000" />
+>>>>>>> ec6805196d73761f9e7ca507b26c2839d7fbb15c
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
     <layout>
+<<<<<<< HEAD
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25716332" />
+=======
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2911302" />
+>>>>>>> ec6805196d73761f9e7ca507b26c2839d7fbb15c
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -564,8 +724,13 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
+<<<<<<< HEAD
       <window_info anchor="bottom" id="Find" order="1" weight="0.32891566" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.393531" />
+=======
+      <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.32891566" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3819277" />
+>>>>>>> ec6805196d73761f9e7ca507b26c2839d7fbb15c
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -630,6 +795,7 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/java/com/example/paper_proj/Domain/ComUser.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/example/paper_proj/Domain/Repository/ComUserRepository.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/example/paper_proj/Domain/Keyword.java">
@@ -643,6 +809,9 @@
       </provider>
     </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-elasticsearch/3.1.6.RELEASE/spring-data-elasticsearch-3.1.6.RELEASE.jar!/org/springframework/data/elasticsearch/annotations/Field.class">
+=======
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/5.1.5.RELEASE/spring-security-core-5.1.5.RELEASE.jar!/org/springframework/security/core/userdetails/UserDetails.class">
+>>>>>>> ec6805196d73761f9e7ca507b26c2839d7fbb15c
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="92">
           <caret line="18" column="18" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
@@ -884,6 +1053,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/java/com/example/paper_proj/Domain/Outcome.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="410">
@@ -895,6 +1065,9 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/example/paper_proj/Domain/Admin.java">
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/paper_proj/Domain/ESIndexDomain/Author.java">
+>>>>>>> ec6805196d73761f9e7ca507b26c2839d7fbb15c
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="277">
           <caret line="16" column="31" lean-forward="true" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="31" />
@@ -952,7 +1125,41 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/java/com/example/paper_proj/Service/AnnouncementService.java">
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/paper_proj/Domain/Repository/OutcomeRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="16" column="53" selection-start-line="16" selection-start-column="53" selection-end-line="16" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/app_ultra.sql">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_ultra.sql">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="36" selection-start-line="15" selection-start-column="36" selection-end-line="15" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/paper_proj/Domain/Outcome.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="40" column="25" selection-start-line="40" selection-start-column="25" selection-end-line="40" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/example/paper_proj/EsDemoApplicationTests.java">
+>>>>>>> ec6805196d73761f9e7ca507b26c2839d7fbb15c
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="134">
           <caret line="16" column="42" lean-forward="true" selection-start-line="16" selection-start-column="42" selection-end-line="16" selection-end-column="42" />
@@ -964,16 +1171,24 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/java/com/example/paper_proj/Controller/UserController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="709">
           <caret line="52" column="34" lean-forward="true" selection-start-line="52" selection-start-column="34" selection-end-line="52" selection-end-column="34" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/paper_proj/Domain/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-21">
+          <caret line="26" column="7" lean-forward="true" selection-start-line="26" selection-start-column="7" selection-end-line="26" selection-end-column="7" />
+>>>>>>> ec6805196d73761f9e7ca507b26c2839d7fbb15c
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/java/com/example/paper_proj/Domain/Expert.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="172">
@@ -992,6 +1207,26 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="19">
           <caret line="53" column="33" selection-start-line="53" selection-start-column="21" selection-end-line="53" selection-end-column="33" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/paper_proj/Domain/bbsReply.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/paper_proj/Domain/Repository/bbsSectionRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/paper_proj/Domain/paperClick.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="27" column="25" lean-forward="true" selection-start-line="27" selection-start-column="25" selection-end-line="27" selection-end-column="25" />
+>>>>>>> ec6805196d73761f9e7ca507b26c2839d7fbb15c
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1000,18 +1235,54 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/example/paper_proj/Domain/User.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="228">
           <caret line="58" column="20" selection-start-line="58" selection-start-column="20" selection-end-line="58" selection-end-column="20" />
           <folding>
             <element signature="imports" expanded="true" />
+=======
+        <state relative-caret-position="279">
+          <caret line="282" column="64" lean-forward="true" selection-start-line="282" selection-start-column="64" selection-end-line="282" selection-end-column="64" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#OutcomeService#0;class#OutcomeService#0" />
+            <element signature="method#addBuffer#0;class#OutcomeService#0" />
+            <element signature="method#getBuffer#0;class#OutcomeService#0" />
+            <element signature="method#getByTitle#0;class#OutcomeService#0" />
+            <element signature="method#getByKeyWords#0;class#OutcomeService#0" />
+            <element signature="method#getByAuthor#0;class#OutcomeService#0" />
+            <element signature="method#getOutcome#0;class#OutcomeService#0" />
+            <element signature="method#getExpert#0;class#OutcomeService#0" />
+            <element signature="e#12429#12430#0" expanded="true" />
+            <element signature="e#12483#12484#0" expanded="true" />
+            <element signature="e#12546#12547#0" expanded="true" />
+            <element signature="e#12600#12601#0" expanded="true" />
+            <element signature="e#12654#12655#0" expanded="true" />
+            <element signature="e#12702#12703#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/paper_proj/Domain/Repository/ClickRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="52" selection-start-line="9" selection-start-column="52" selection-end-line="9" selection-end-column="52" />
+          <folding>
+            <element signature="imports" expanded="true" />
+>>>>>>> ec6805196d73761f9e7ca507b26c2839d7fbb15c
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/example/paper_proj/Controller/ApiController.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="176">
           <caret line="91" column="74" selection-start-line="91" selection-start-column="74" selection-end-line="91" selection-end-column="74" />
+=======
+        <state relative-caret-position="195">
+          <caret line="57" column="78" selection-start-line="57" selection-start-column="78" selection-end-line="57" selection-end-column="78" />
+>>>>>>> ec6805196d73761f9e7ca507b26c2839d7fbb15c
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#getOutcome#0;class#ApiController#0" />
@@ -1022,6 +1293,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/java/com/example/paper_proj/Controller/BBS_ReplyController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="462">
@@ -1059,6 +1331,15 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+=======
+    <entry file="file://$PROJECT_DIR$/api_doc.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="326">
+            <caret line="165" column="18" selection-start-line="165" selection-start-column="18" selection-end-line="165" selection-end-column="18" />
+          </first_editor>
+          <second_editor />
+>>>>>>> ec6805196d73761f9e7ca507b26c2839d7fbb15c
         </state>
       </provider>
     </entry>

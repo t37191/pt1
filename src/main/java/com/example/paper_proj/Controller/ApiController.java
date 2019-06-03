@@ -56,13 +56,19 @@ public class ApiController {
     //论文详情页
     @GetMapping("/paper")
     public String getOutcome(@RequestParam("id")String id) throws IOException {
-        return outcomeService.getOutcome(id);
+        return outcomeService.getOutcome(id,true);
     }
 
     //获得专家详情
     @GetMapping("/expert")
     public String getExpert(@RequestParam("id")String id) throws IOException{
         return outcomeService.getExpert(id);
+    }
+
+    //获得热点论文
+    @GetMapping("/hotpapers")
+    public String hotPapers() throws IOException {
+        return outcomeService.hotPaper();
     }
 
     //用户登陆
