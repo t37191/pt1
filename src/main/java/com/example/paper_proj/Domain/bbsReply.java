@@ -25,16 +25,15 @@ public class bbsReply {
 
     @Setter
     @Getter
-    @Column(name = "r_topic_id")
-    private Integer topicid;
+    @Column(name = "r_outcome_id")
+    private String outcomeid;
 
     @Setter
     @Getter
     @Column(name = "reply_content")
-    private byte[] replycontent;
+    private String replycontent;
 
     @Setter
-    @Getter
     @Column(name = "reply_time")
     private Date replytime;
 
@@ -47,4 +46,9 @@ public class bbsReply {
     @Getter
     @Column(name="reply_type")
     private Integer replytype;
+
+    public String getReplytime(){
+        String temp=this.replytime.toString().replace(".0","");
+        return temp;
+    }
 }
