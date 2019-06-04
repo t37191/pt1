@@ -18,6 +18,7 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -46,14 +47,18 @@ public class UserService  {
     BCryptPasswordEncoder bCryptPasswordEncoder;
 
     //用户登录授权token
-    public Tuple<String,Integer> login(String username, String password ) {
+    public List<Object> login(String username, String password ) {
         UsernamePasswordAuthenticationToken upToken = new UsernamePasswordAuthenticationToken( username, password );
         final Authentication authentication = authenticationManager.authenticate(upToken);
         SecurityContextHolder.getContext().setAuthentication(authentication);
         final UserDetails userDetails = userDetailsService.loadUserByUsername( username );
         String token=jwtTokenUtil.generateToken(userDetails);
         User user = userRepository.findByUsername(username);
-        return new Tuple<>(token,user.getUser_id());
+        List<Object> list = new ArrayList<>();
+        list.add(token);
+        list.add(user.getUser_id());
+        list.add(user.getAuth());
+        return list;
     }
 
     //注册

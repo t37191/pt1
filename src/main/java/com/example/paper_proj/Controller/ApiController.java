@@ -12,6 +12,7 @@ import org.springframework.security.core.AuthenticationException;
 import org.springframework.web.bind.annotation.*;
 
 import java.io.IOException;
+import java.util.List;
 
 @RestController
 @CrossOrigin(origins = "http://localhost:8000")
@@ -56,7 +57,7 @@ public class ApiController {
     //论文详情页
     @GetMapping("/paper")
     public String getOutcome(@RequestParam("id")String id) throws IOException {
-        return outcomeService.getOutcome(id,true);
+        return outcomeService.getOutcome(id);
     }
 
     //获得专家详情
@@ -75,14 +76,19 @@ public class ApiController {
     @PostMapping("/user/login")
     public String userLogin(@RequestBody User user) throws AuthenticationException, JSONException {
         try{
-            Tuple<String,Integer> tuple =userService.login( user.getUsername(), user.getPassword());
-            String token = tuple.v1();
-            Integer user_id = tuple.v2();
+            List<Object> list = userService.login( user.getUsername(), user.getPassword());
+            String token = (String)list.get(0);
+            Integer user_id = (Integer)list.get(1);
+            String auth = (String)list.get(2);
             String username = user.getUsername();
             JSONObject jsonObject = new JSONObject();
             jsonObject.put("token",token);
             jsonObject.put("user_id",user_id);
             jsonObject.put("user_name",username);
+            if(auth.equals("admin"))
+                jsonObject.put("isadmin","true");
+            else
+                jsonObject.put("isadmin","false");
             return jsonObject.toString();
         }
         catch (Exception e){
