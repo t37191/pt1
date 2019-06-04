@@ -56,7 +56,7 @@ public class ApiController {
     //论文详情页
     @GetMapping("/paper")
     public String getOutcome(@RequestParam("id")String id) throws IOException {
-        return outcomeService.getOutcome(id,true);
+        return outcomeService.getOutcome(id);
     }
 
     //获得专家详情

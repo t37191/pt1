@@ -9,10 +9,13 @@ import com.example.paper_proj.Domain.Repository.OutcomeRepository;
 import com.example.paper_proj.Domain.paperClick;
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
+import org.apache.commons.collections.map.SingletonMap;
 import org.apache.http.HttpHost;
 import org.apache.lucene.search.join.ScoreMode;
 import org.elasticsearch.action.search.SearchRequest;
 import org.elasticsearch.action.search.SearchResponse;
+import org.elasticsearch.action.update.UpdateRequest;
+import org.elasticsearch.action.update.UpdateResponse;
 import org.elasticsearch.client.RequestOptions;
 import org.elasticsearch.client.RestClient;
 import org.elasticsearch.client.RestHighLevelClient;
@@ -21,9 +24,12 @@ import org.elasticsearch.common.unit.Fuzziness;
 import org.elasticsearch.common.unit.TimeValue;
 import org.elasticsearch.index.query.QueryBuilder;
 import org.elasticsearch.index.query.QueryBuilders;
+import org.elasticsearch.script.Script;
+import org.elasticsearch.script.ScriptType;
 import org.elasticsearch.search.SearchHit;
 import org.elasticsearch.search.SearchHits;
 import org.elasticsearch.search.builder.SearchSourceBuilder;
+import org.elasticsearch.search.sort.SortOrder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
@@ -99,21 +105,7 @@ public class OutcomeService {
         SearchHit[] searchHits = hits.getHits();
         JSONArray jsonArray = new JSONArray();
         for(SearchHit hit : searchHits){
-            Map source = hit.getSourceAsMap();
-            JSONObject jsonObject = new JSONObject();
-            String paper_id = (String)source.get("id");
-            jsonObject.put("id",paper_id);
-            jsonObject.put("title",(String)source.get("title"));
-            jsonObject.put("abstr",(String)source.get("abstr"));
-            jsonObject.put("authors",(List<Author>)source.get("authors"));
-            jsonObject.put("keywords",(List<String>)source.get("keywords"));
-            jsonObject.put("pdf",(String)source.get("pdf"));
-            jsonObject.put("year",(Integer)source.get("year"));
-            if(clickRepository.existsByPaperid(paper_id))
-                jsonObject.put("cnt",clickRepository.findByPaperid(paper_id).getClickcnt());
-            else{
-                jsonObject.put("cnt",0);
-            }
+            JSONObject jsonObject = JSONObject.fromObject(hit.getSourceAsString());
             jsonArray.add(jsonObject);
         }
         addBuffer(key,jsonArray);
@@ -142,21 +134,7 @@ public class OutcomeService {
         SearchHit[] searchHits = hits.getHits();
         JSONArray jsonArray = new JSONArray();
         for(SearchHit hit : searchHits){
-            Map source = hit.getSourceAsMap();
-            JSONObject jsonObject = new JSONObject();
-            String paper_id = (String)source.get("id");
-            jsonObject.put("id",paper_id);
-            jsonObject.put("title",(String)source.get("title"));
-            jsonObject.put("abstr",(String)source.get("abstr"));
-            jsonObject.put("authors",(List<Author>)source.get("authors"));
-            jsonObject.put("keywords",(List<String>)source.get("keywords"));
-            jsonObject.put("pdf",(String)source.get("pdf"));
-            jsonObject.put("year",(Integer)source.get("year"));
-            if(clickRepository.existsByPaperid(paper_id))
-                jsonObject.put("cnt",clickRepository.findByPaperid(paper_id).getClickcnt());
-            else{
-                jsonObject.put("cnt",0);
-            }
+            JSONObject jsonObject = JSONObject.fromObject(hit.getSourceAsString());
             jsonArray.add(jsonObject);
         }
         addBuffer(key,jsonArray);
@@ -178,6 +156,7 @@ public class OutcomeService {
         sourceBuilder.query(authorQuery);
         sourceBuilder.from(0);
         sourceBuilder.size(10000);
+        sourceBuilder.sort("year", SortOrder.DESC);
         sourceBuilder.timeout(new TimeValue(60, TimeUnit.SECONDS));
         SearchRequest searchRequest = new SearchRequest();
         searchRequest.indices("aminer");
@@ -187,29 +166,25 @@ public class OutcomeService {
         SearchHit[] searchHits = hits.getHits();
         JSONArray jsonArray = new JSONArray();
         for(SearchHit hit : searchHits){
-            Map source = hit.getSourceAsMap();
-            JSONObject jsonObject = new JSONObject();
-            String paper_id = (String)source.get("id");
-            jsonObject.put("id",paper_id);
-            jsonObject.put("title",(String)source.get("title"));
-            jsonObject.put("abstr",(String)source.get("abstr"));
-            jsonObject.put("authors",(List<Author>)source.get("authors"));
-            jsonObject.put("keywords",(List<String>)source.get("keywords"));
-            jsonObject.put("pdf",(String)source.get("pdf"));
-            jsonObject.put("year",(Integer)source.get("year"));
-            if(clickRepository.existsByPaperid(paper_id))
-                jsonObject.put("cnt",clickRepository.findByPaperid(paper_id).getClickcnt());
-            else{
-                jsonObject.put("cnt",0);
-            }
+            JSONObject jsonObject = JSONObject.fromObject(hit.getSourceAsString());
             jsonArray.add(jsonObject);
         }
         addBuffer(key,jsonArray);
         return jsonArray;
     }
 
+    //增加查看次数
+    public void addCnt(String id) throws IOException {
+
+        UpdateRequest updateRequest = new UpdateRequest("aminer","_doc",id);
+        Map<String , Object> parameters = new SingletonMap("count",1);
+        Script inline = new Script(ScriptType.INLINE, "painless", "ctx._source.cnt += params.count", parameters);
+        updateRequest.script(inline);
+        UpdateResponse response = client.update(updateRequest,RequestOptions.DEFAULT);
+    }
+
     //获取单篇论文信息
-    public String getOutcome(String id,boolean flag) throws IOException {
+    public String getOutcome(String id) throws IOException {
         QueryBuilder matchQuery = QueryBuilders.matchPhraseQuery("id",id);
         SearchSourceBuilder sourceBuilder = new SearchSourceBuilder();
         sourceBuilder.query(matchQuery);
@@ -218,36 +193,12 @@ public class OutcomeService {
         searchRequest.source(sourceBuilder);
         SearchResponse searchResponse = client.search(searchRequest, RequestOptions.DEFAULT);
         SearchHits hits = searchResponse.getHits();
-        SearchHit[] searchHits = hits.getHits();
-        Map source = searchHits[0].getSourceAsMap();
-        JSONObject jsonObject = new JSONObject();
-        String paper_id = (String)source.get("id");
-        jsonObject.put("id",paper_id);
-        jsonObject.put("title",(String)source.get("title"));
-        jsonObject.put("abstr",(String)source.get("abstr"));
-        jsonObject.put("authors",(List<Author>)source.get("authors"));
-        jsonObject.put("keywords",(List<String>)source.get("keywords"));
-        jsonObject.put("pdf",(String)source.get("pdf"));
-        jsonObject.put("year",(Integer)source.get("year"));
-        if(clickRepository.existsByPaperid(paper_id)){
-            Integer cnt = clickRepository.findByPaperid(paper_id).getClickcnt();
-            paperClick paper = clickRepository.findByPaperid(paper_id);
-            if(flag) {
-                jsonObject.put("cnt", cnt + 1);
-                paper.setClickcnt(cnt + 1);
-                clickRepository.save(paper);
-            }
-            else {
-                jsonObject.put("cnt", cnt);
-            }
-        }
-        else{
-            jsonObject.put("cnt",1);
-            paperClick paper = new paperClick();
-            paper.setClickcnt(1);
-            paper.setPaperid(paper_id);
-            clickRepository.save(paper);
-        }
+
+        addCnt(hits.getHits()[0].getId());
+
+        searchResponse = client.search(searchRequest, RequestOptions.DEFAULT);
+        hits = searchResponse.getHits();
+        JSONObject jsonObject = JSONObject.fromObject(hits.getHits()[0].getSourceAsString());
         return jsonObject.toString();
     }
 
@@ -274,15 +225,25 @@ public class OutcomeService {
 
     //返回点击量前100篇论文
     public String hotPaper() throws IOException {
-        Sort.Order order = Sort.Order.desc("clickcnt");
-        Sort sort = Sort.by(order);
-        List<paperClick> list = clickRepository.findAll(sort);
+        QueryBuilder queryBuilder = QueryBuilders.matchAllQuery();
+        SearchSourceBuilder sourceBuilder = new SearchSourceBuilder();
+        sourceBuilder.query(queryBuilder);
+        sourceBuilder.from(0);
+        sourceBuilder.size(100);
+        sourceBuilder.sort("cnt", SortOrder.DESC);
+        sourceBuilder.timeout(new TimeValue(60, TimeUnit.SECONDS));
+        SearchRequest searchRequest = new SearchRequest();
+        searchRequest.indices("aminer");
+        searchRequest.source(sourceBuilder);
+        SearchResponse searchResponse = client.search(searchRequest, RequestOptions.DEFAULT);
+        SearchHits hits = searchResponse.getHits();
+        SearchHit[] searchHits = hits.getHits();
         JSONArray jsonArray = new JSONArray();
-        int cnt = 0;
-        for(paperClick paper:list){
-            jsonArray.add(getOutcome(paper.getPaperid(),false));
-            if(cnt++ == 100)
+        for(SearchHit hit : searchHits){
+            JSONObject jsonObject = JSONObject.fromObject(hit.getSourceAsString());
+            if ((Integer)jsonObject.get("cnt") == 0)
                 break;
+            jsonArray.add(jsonObject);
         }
         return jsonArray.toString();
     }
