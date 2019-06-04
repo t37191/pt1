@@ -17,7 +17,6 @@ public interface bbsReplyRepository extends JpaRepository<bbsReply,Integer> {
 
     //通过论文获取所有回复
     List<bbsReply> getByOutcomeidAndReplytypeOrderByReplytimeAsc(String outcome_id,Integer reply_type);
-
     //获取某个回复下面的回复
     List<bbsReply> getByRreplyidOrderByReplytimeAsc(Integer r_reply_id);
     //通过回复ID获取回复者的用户ID

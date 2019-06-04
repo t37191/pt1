@@ -29,7 +29,11 @@ public class AnnouncementController {
                                                  @RequestParam("_limit")Integer limit){
         return announcementList.subList(start,Math.min(start+limit,announcementList.size()));
     }
-
+    //根据公告ID获取某条公告
+    @GetMapping(value = "/announcement/1")
+    public Announcement getAnnouncementById(@RequestParam("announcement_id")Integer id){
+        return announcementService.getAnnouncementById(id);
+    }
     //增加公告
     @PostMapping(value="/announcement")
     @PreAuthorize("hasAuthority('admin')")

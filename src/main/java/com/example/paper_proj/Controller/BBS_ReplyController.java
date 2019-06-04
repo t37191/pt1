@@ -67,7 +67,27 @@ public class BBS_ReplyController {
         return jsonArray.subList(start,Math.min(start+limit,replyList.size())).toString();
     }
 
-
+//    //根据回复ID获取单条回复
+//    @GetMapping(value = "/bbs_reply/1")
+//    public String getReplyByReplyId(@RequestParam("reply_id")Integer id){
+//        bbsReply reply=replyService.getReplyByReplyid(id);
+//        JSONObject jsonObject = new JSONObject();
+//        jsonObject.put("reply_id",(Integer)reply.getReplyid());
+//        jsonObject.put("user_id",(Integer)reply.getUserid());
+//        jsonObject.put("user_name",(String)replyService.getUsernameByUserid(temp.getUserid()));
+//        jsonObject.put("r_outcome_id",(String)temp.getOutcomeid());
+//        jsonObject.put("reply_content",(String)temp.getReplycontent());
+//        jsonObject.put("r_reply_id",(Integer)temp.getRreplyid());
+//        jsonObject.put("reply_time",(String)temp.getReplytime());
+//        if(reply_id==0){
+//            jsonObject.put("r_reply_user_name", (String) null);
+//            jsonObject.put("r_reply_user_id", (Integer) null);
+//        }else {
+//            Integer user_id = replyService.getUseridByReplyid(temp.getRreplyid());
+//            jsonObject.put("r_reply_user_name", (String) replyService.getUsernameByUserid(user_id));
+//            jsonObject.put("r_reply_user_id", (Integer) user_id);
+//        }
+//    }
 //    //通过帖子获取回复列表
 //    @GetMapping(value="/bbs_topic_reply")
 //    public List<bbsReply> getReplyByTopic_idAndR_reply_id(
