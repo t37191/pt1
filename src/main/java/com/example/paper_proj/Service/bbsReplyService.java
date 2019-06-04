@@ -33,6 +33,10 @@ public class bbsReplyService {
         bbsReply temp=replyRepository.getByReplyid(reply_id);
         return temp.getUserid();
     }
+    //根据回复ID获取某个回复
+    public bbsReply getReplyByReplyid(Integer id){
+        return replyRepository.getByReplyid(id);
+    }
     //根据用户ID获取用户名
     public String getUsernameByUserid(Integer userid){
         return userService.getById(userid).getUsername();

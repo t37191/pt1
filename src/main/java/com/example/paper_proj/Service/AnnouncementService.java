@@ -12,13 +12,19 @@ import java.util.List;
 public class AnnouncementService {
     @Autowired
     private AnnouncementRepository announcementRepository;
+
     //获取全部公告
-    public List<Announcement> getAllAnnouncement(){
-        return announcementRepository.getAllByIdIsNotNullOrderByTime();
+    public List<Announcement> getAllAnnouncement() {
+        return announcementRepository.getAllByIdIsNotNullOrderByTimeDesc();
     }
+
     //增加公告
-    public Announcement addAnnouncement(Announcement announcement){
+    public Announcement addAnnouncement(Announcement announcement) {
         announcement.setTime(new Date());
         return announcementRepository.save(announcement);
+    }
+    //通过公告ID查看公告
+    public Announcement getAnnouncementById(Integer id){
+        return announcementRepository.getById(id);
     }
 }
