@@ -17,14 +17,14 @@ public class UserController {
 
     //查看所有用户
     @GetMapping(value = "/userlist")
-    @PreAuthorize("hasAnyAuthority('admin')")
+    @PreAuthorize("hasAuthority('admin')")
     public List<User> getAll(){
         return userService.getAllUsers();
     }
 
     //按用户名查看
     @GetMapping(value = "/{username}")
-    @PreAuthorize("hasAuthority('admin,user')")
+    @PreAuthorize("hasAnyAuthority('admin,user')")
     public User getUser(@PathVariable("username") String username){
         return userService.getByName(username);
     }
@@ -48,7 +48,7 @@ public class UserController {
 
     //修改信息
     @PutMapping(value = "/update")
-    @PreAuthorize("hasAuthority('admin,user')")
+    @PreAuthorize("hasAnyAuthority('admin,user')")
     public User updateUser(@RequestBody User user){
         return userService.updateUser(user);
     }
