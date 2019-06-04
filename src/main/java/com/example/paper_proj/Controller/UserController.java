@@ -24,13 +24,10 @@ public class UserController {
 
     //按用户名查看
     @GetMapping(value = "/{username}")
-    @PreAuthorize("hasAuthority('admin')")
+    @PreAuthorize("hasAuthority('admin,user')")
     public User getUser(@PathVariable("username") String username){
         return userService.getByName(username);
     }
-
-//    @PostMapping(value = "/signup-admin")
-//    public Admin signupAdmin(@RequestBody Admin admin) {return userService.signupAdmin(admin);}
 
     //删除用户
     @DeleteMapping("/delete")

@@ -1,12 +1,9 @@
 package com.example.paper_proj.Service;
 
-import com.example.paper_proj.Domain.ESIndexDomain.Author;
 import com.example.paper_proj.Domain.ESIndexDomain.Pub;
 import com.example.paper_proj.Domain.ESIndexDomain.Tag;
 import com.example.paper_proj.Domain.Outcome;
-import com.example.paper_proj.Domain.Repository.ClickRepository;
 import com.example.paper_proj.Domain.Repository.OutcomeRepository;
-import com.example.paper_proj.Domain.paperClick;
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
 import org.apache.commons.collections.map.SingletonMap;
@@ -31,7 +28,6 @@ import org.elasticsearch.search.SearchHits;
 import org.elasticsearch.search.builder.SearchSourceBuilder;
 import org.elasticsearch.search.sort.SortOrder;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import java.io.IOException;
@@ -45,9 +41,6 @@ public class OutcomeService {
 
     @Autowired
     private OutcomeRepository outcomeRepository;
-
-    @Autowired
-    private ClickRepository clickRepository;
 
     private RestHighLevelClient client = null;
 
