@@ -24,7 +24,7 @@ public class UserController {
 
     //按用户名查看
     @GetMapping(value = "/{username}")
-    @PreAuthorize("hasAuthority('admin,user')")
+    @PreAuthorize("hasAnyAuthority('admin,user')")
     public User getUser(@PathVariable("username") String username){
         return userService.getByName(username);
     }

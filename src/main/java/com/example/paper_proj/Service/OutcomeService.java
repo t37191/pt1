@@ -1,5 +1,7 @@
 package com.example.paper_proj.Service;
 
+import com.example.paper_proj.Conf.Config;
+import com.example.paper_proj.Domain.ESIndexDomain.Author;
 import com.example.paper_proj.Domain.ESIndexDomain.Pub;
 import com.example.paper_proj.Domain.ESIndexDomain.Tag;
 import com.example.paper_proj.Domain.Outcome;
@@ -31,6 +33,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
@@ -47,7 +50,7 @@ public class OutcomeService {
     private Map<Tuple<String,String>,JSONArray> buffer = null;
 
     public OutcomeService(){
-        client = new RestHighLevelClient(RestClient.builder(new HttpHost("localhost", 9200)));
+        client = new RestHighLevelClient(RestClient.builder(new HttpHost(Config.HOST_NAME, 9200)));
         buffer = new LinkedHashMap<>();
     }
 
@@ -206,6 +209,15 @@ public class OutcomeService {
         SearchResponse searchResponse = client.search(searchRequest, RequestOptions.DEFAULT);
         SearchHits hits = searchResponse.getHits();
         SearchHit[] searchHits = hits.getHits();
+        if(searchHits.length == 0){
+            JSONObject jsonObject = new JSONObject();
+            jsonObject.put("id",id);
+            jsonObject.put("name","该专家未注册");
+            jsonObject.put("n_pubs",0);
+            jsonObject.put("pubs",new ArrayList<Pub>());
+            jsonObject.put("tags",new ArrayList<Tag>());
+            return jsonObject.toString();
+        }
         Map source = searchHits[0].getSourceAsMap();
         JSONObject jsonObject = new JSONObject();
         jsonObject.put("id",(String)source.get("id"));

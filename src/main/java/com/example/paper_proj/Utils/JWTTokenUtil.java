@@ -1,6 +1,6 @@
 package com.example.paper_proj.Utils;
 
-import com.example.paper_proj.Conf.TokenConf;
+import com.example.paper_proj.Conf.Config;
 import com.example.paper_proj.Domain.User;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
@@ -57,7 +57,7 @@ public class JWTTokenUtil implements Serializable {
         Claims claims;
         try {
             claims = Jwts.parser()
-                    .setSigningKey( TokenConf.SECRET )
+                    .setSigningKey( Config.SECRET )
                     .parseClaimsJws(token)
                     .getBody();
         } catch (Exception e) {
@@ -67,7 +67,7 @@ public class JWTTokenUtil implements Serializable {
     }
 
     private Date generateExpirationDate() {
-        return new Date(System.currentTimeMillis() + TokenConf.EXPIRATION_TIME * 1000);
+        return new Date(System.currentTimeMillis() + Config.EXPIRATION_TIME * 1000);
     }
 
     private Boolean isTokenExpired(String token) {
@@ -90,7 +90,7 @@ public class JWTTokenUtil implements Serializable {
         return Jwts.builder()
                 .setClaims(claims)
                 .setExpiration(generateExpirationDate())
-                .signWith(SignatureAlgorithm.HS512, TokenConf.SECRET )
+                .signWith(SignatureAlgorithm.HS512, Config.SECRET )
                 .compact();
     }
 
@@ -98,7 +98,7 @@ public class JWTTokenUtil implements Serializable {
         try{
             Date expiredate = getExpirationDateFromToken(token);
             Date nowdate = new Date();
-            if(expiredate.getTime() - nowdate.getTime() <= TokenConf.REFRESH_TIME * 1000 &&
+            if(expiredate.getTime() - nowdate.getTime() <= Config.REFRESH_TIME * 1000 &&
                     expiredate.getTime() - nowdate.getTime() > 10)
                 return 1;
             return 0;

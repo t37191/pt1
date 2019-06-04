@@ -1,6 +1,6 @@
 package com.example.paper_proj.Security;
 
-import com.example.paper_proj.Conf.TokenConf;
+import com.example.paper_proj.Conf.Config;
 import com.example.paper_proj.Utils.JWTTokenUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -30,9 +30,9 @@ public class JWTTokenFilter extends OncePerRequestFilter {
     @Override
     protected void doFilterInternal (HttpServletRequest request, HttpServletResponse response, FilterChain chain) throws ServletException, IOException {
 
-        String authHeader = request.getHeader( TokenConf.HEADER_STRING );
-        if (authHeader != null && authHeader.startsWith( TokenConf.TOKEN_PREFIX )) {
-            final String authToken = authHeader.substring( TokenConf.TOKEN_PREFIX.length() );
+        String authHeader = request.getHeader( Config.HEADER_STRING );
+        if (authHeader != null && authHeader.startsWith( Config.TOKEN_PREFIX )) {
+            final String authToken = authHeader.substring( Config.TOKEN_PREFIX.length() );
             String username = jwtTokenUtil.getUsernameFromToken(authToken);
             if (username != null && SecurityContextHolder.getContext().getAuthentication() == null) {
                 UserDetails userDetails = this.userDetailsService.loadUserByUsername(username);

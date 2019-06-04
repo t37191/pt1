@@ -1,12 +1,8 @@
 package com.example.paper_proj.Service;
 
-import com.example.paper_proj.Domain.Admin;
-import com.example.paper_proj.Domain.Repository.AdminRepository;
-import com.example.paper_proj.Domain.Repository.ExpertRepository;
 import com.example.paper_proj.Domain.Repository.UserRepository;
 import com.example.paper_proj.Domain.User;
 import com.example.paper_proj.Utils.JWTTokenUtil;
-import org.elasticsearch.common.collect.Tuple;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -36,12 +32,6 @@ public class UserService  {
 
     @Autowired
     private UserRepository userRepository;
-
-    @Autowired
-    private ExpertRepository expertRepository;
-
-    @Autowired
-    private AdminRepository adminRepository;
 
     @Autowired
     BCryptPasswordEncoder bCryptPasswordEncoder;
@@ -84,28 +74,20 @@ public class UserService  {
 //
 //    }
 
-//    public Expert signupExpert(User user,String Dep,String Post){
-//        Expert expert=new Expert(user,Dep,Post);
-//        expert.setPassword(bCryptPasswordEncoder.encode(expert.getPassword()));
-//        expert.setAuth("expert");
-//        return expertRepository.save(expert);
+//    public User signupExpert(User user, String Dep, String Post){
+//
 //    }
 
-    public Admin signupAdmin(Admin admin){
+    public User signupAdmin(User admin){
         admin.setPassword(bCryptPasswordEncoder.encode(admin.getPassword()));
         admin.setAuth("admin");
-        return adminRepository.save(admin);
+        return userRepository.save(admin);
     }
 
     //修改
     public User updateUser(User user){
         return userRepository.save(user);
     }
-
-    public Admin updateAdmin(Admin admin){
-        return adminRepository.save(admin);
-    }
-
 
 
     //删除
