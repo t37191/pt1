@@ -40,13 +40,4 @@ public class Outcome {
     @Field(type = FieldType.Text)
     protected String doi;
 
-//    @OneToMany(mappedBy = "outcome",cascade = CascadeType.ALL)
-//    @Getter
-//    @Setter
-//    private Set<Keyword> keywords=new HashSet<>();
-//
-//    public void addKeywords(Keyword keyword){
-//        keyword.setOutcome(this);
-//        this.keywords.add(keyword);
-//    }
 }

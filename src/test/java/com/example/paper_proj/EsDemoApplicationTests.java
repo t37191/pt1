@@ -15,6 +15,7 @@ import org.elasticsearch.action.update.UpdateResponse;
 import org.elasticsearch.client.RequestOptions;
 import org.elasticsearch.client.RestClient;
 import org.elasticsearch.client.RestHighLevelClient;
+import org.elasticsearch.common.text.Text;
 import org.elasticsearch.common.unit.TimeValue;
 import org.elasticsearch.index.get.GetResult;
 import org.elasticsearch.index.query.QueryBuilder;
@@ -24,6 +25,8 @@ import org.elasticsearch.script.ScriptType;
 import org.elasticsearch.search.SearchHit;
 import org.elasticsearch.search.SearchHits;
 import org.elasticsearch.search.builder.SearchSourceBuilder;
+import org.elasticsearch.search.fetch.subphase.highlight.HighlightBuilder;
+import org.elasticsearch.search.fetch.subphase.highlight.HighlightField;
 import org.json.JSONException;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -58,10 +61,17 @@ public class EsDemoApplicationTests {
 
     @Test
     public void analyserTest() throws IOException, JSONException {
-        String word = "nature of sports life";
         RestHighLevelClient client = new RestHighLevelClient(RestClient.builder(new HttpHost("localhost", 9200)));
-        QueryBuilder matchQuery = QueryBuilders.matchQuery("title",word).analyzer("standard");
+        QueryBuilder matchQuery = QueryBuilders.matchQuery("title","nature of sports").analyzer("standard");
         SearchSourceBuilder sourceBuilder = new SearchSourceBuilder();
+        HighlightBuilder highlightBuilder = new HighlightBuilder();
+        HighlightBuilder.Field highlightTitle =
+                new HighlightBuilder.Field("title");
+        highlightTitle.highlighterType("unified");
+        highlightTitle.preTags("<em><span style = \"coler:#ed4014\">");
+        highlightTitle.postTags("</span></em>");
+        highlightBuilder.field(highlightTitle);
+        sourceBuilder.highlighter(highlightBuilder);
         sourceBuilder.query(matchQuery);
         sourceBuilder.from(0);
         sourceBuilder.size(10000);
@@ -72,13 +82,22 @@ public class EsDemoApplicationTests {
         SearchResponse searchResponse = client.search(searchRequest,RequestOptions.DEFAULT);
         SearchHits hits = searchResponse.getHits();
         SearchHit[] searchHits = hits.getHits();
-//        JSONObject jsonObject = JSONObject.fromObject(searchHits);
         JSONArray jsonArray = new JSONArray();
-        List<Outcome> outcomes = new ArrayList<>();
+        int cnt = 0;
         for(SearchHit hit : searchHits){
+            if(cnt ++ > 1)
+                break;
+            Map<String, HighlightField> field = hit.getHighlightFields();
+            HighlightField highlightField = field.get("title");
             JSONObject jsonObject = JSONObject.fromObject(hit.getSourceAsString());
+            String title = "";
+            for(Text text:highlightField.getFragments()){
+                title+=text;
+            }
+            jsonObject.put("title",title);
             jsonArray.add(jsonObject);
         }
+        System.out.println(jsonArray.toString());
     }
 
     @Test

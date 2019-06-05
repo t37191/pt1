@@ -19,8 +19,10 @@ import org.elasticsearch.client.RequestOptions;
 import org.elasticsearch.client.RestClient;
 import org.elasticsearch.client.RestHighLevelClient;
 import org.elasticsearch.common.collect.Tuple;
+import org.elasticsearch.common.text.Text;
 import org.elasticsearch.common.unit.Fuzziness;
 import org.elasticsearch.common.unit.TimeValue;
+import org.elasticsearch.index.query.BoolQueryBuilder;
 import org.elasticsearch.index.query.QueryBuilder;
 import org.elasticsearch.index.query.QueryBuilders;
 import org.elasticsearch.script.Script;
@@ -28,15 +30,16 @@ import org.elasticsearch.script.ScriptType;
 import org.elasticsearch.search.SearchHit;
 import org.elasticsearch.search.SearchHits;
 import org.elasticsearch.search.builder.SearchSourceBuilder;
+import org.elasticsearch.search.fetch.subphase.highlight.HighlightBuilder;
+import org.elasticsearch.search.fetch.subphase.highlight.HighlightField;
 import org.elasticsearch.search.sort.SortOrder;
+import org.omg.PortableInterceptor.SYSTEM_EXCEPTION;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import sun.security.x509.AVA;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.LinkedHashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.concurrent.TimeUnit;
 
 @Service
@@ -79,6 +82,14 @@ public class OutcomeService {
         return jsonArray;
     }
 
+    //highlightBuilder
+    public HighlightBuilder.Field highLightBuilder(String name){
+        HighlightBuilder.Field field = new HighlightBuilder.Field(name);
+        field.preTags("<em><span style = \"color:#ed4014\">");
+        field.postTags("</span></em>");
+        return field;
+    }
+
     //根据标题查找论文
     public JSONArray getByTitle(String word) throws IOException {
         Tuple<String,String> key = new Tuple<>("title",word);
@@ -89,6 +100,11 @@ public class OutcomeService {
         }
         QueryBuilder matchQuery = QueryBuilders.matchQuery("title",word).analyzer("standard");
         SearchSourceBuilder sourceBuilder = new SearchSourceBuilder();
+        HighlightBuilder highlightBuilder = new HighlightBuilder();
+        HighlightBuilder.Field highlightTitle = highLightBuilder("title");
+        highlightTitle.highlighterType("unified");
+        highlightBuilder.field(highlightTitle);
+        sourceBuilder.highlighter(highlightBuilder);
         sourceBuilder.query(matchQuery);
         sourceBuilder.from(0);
         sourceBuilder.size(10000);
@@ -101,9 +117,18 @@ public class OutcomeService {
         SearchHit[] searchHits = hits.getHits();
         JSONArray jsonArray = new JSONArray();
         for(SearchHit hit : searchHits){
+            Map<String, HighlightField> field = hit.getHighlightFields();
+            String title = "";
+            HighlightField highlightField = field.get("title");
+            for(Text text:highlightField.getFragments()){
+                title+=text;
+            }
             JSONObject jsonObject = JSONObject.fromObject(hit.getSourceAsString());
+            jsonObject.put("title",title);
             jsonArray.add(jsonObject);
         }
+
+
         addBuffer(key,jsonArray);
         return jsonArray;
     }
