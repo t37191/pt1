@@ -141,7 +141,7 @@ public class OutcomeService {
             addBuffer(key,array);
             return array;
         }
-        QueryBuilder matchQuery = QueryBuilders.matchQuery("keywords",keywords).analyzer("standard").fuzziness(Fuzziness.AUTO);
+        QueryBuilder matchQuery = QueryBuilders.matchQuery("keywords",keywords).analyzer("standard");
         SearchSourceBuilder sourceBuilder = new SearchSourceBuilder();
         sourceBuilder.query(matchQuery);
         sourceBuilder.from(0);
